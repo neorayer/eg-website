@@ -1,0 +1,169 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+
+<overlay 
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<popupset>
+		<menupopup id="room-users-menupopup" onpopupshowing="RoomUser.onMenuShowing()">
+			<menuitem id="room-users-addfriend-menuitem" label="加为好友" oncommand="RoomUser.onAddToFriends()" />
+			<menuitem id="room-users-chat-menuitem" label="聊天" oncommand="RoomUser.chatToSelected()" />
+		</menupopup>
+		<menupopup id="team-member-menupopup" onpopupshowing="Team.onMenuShowing()">
+			<menuitem id="team-member-addfriend-menuitem" label="加为好友" oncommand="Team.onAddToFriends()" />
+			<menuitem id="team-member-chat-menuitem" label="聊天" oncommand="Team.chatToSelected()" />
+		</menupopup>
+		<menupopup id="user-friend-menupopup" >
+			<menuitem label="删除好友" oncommand="UserFriend.delSelected()" />
+			<menuitem label="单独聊天" oncommand="UserFriend.chatToSelected()" />
+		</menupopup>
+		<menupopup id="user-info-menupopup">
+			<menuitem label="修改个人信息" oncommand="Main.gotoUserInfo()" />
+		</menupopup>
+	</popupset>  
+	  
+	<vbox id="aide-box">
+		<tabbox id="aide-tabbox" flex="1" >
+			<hbox >
+				<tabs id="aide-tabs">
+					<tab id="aide-person-tab" label="个人" />
+					<tab id="aide-friend-tab" label="好友" />
+					<tab id="aide-team-tab" label="战队" />
+					<tab id="aide-room-tab" label="房间" />
+				</tabs>
+			</hbox>
+			<tabpanels id="aide-tabpanels" flex="1">
+				<!-- 个人 Begin -->
+				<tabpanel orient="vertical">
+					<vbox id="aide-avator-box"  context="user-info-menupopup" >
+						<hbox>
+						<image id="aide-avator-image" />
+						</hbox>
+					</vbox>
+					<box>
+						<button id="mod-userinfo-button" label="修改信息和头像" oncommand="Main.gotoUserInfo()" />
+					</box>
+					<box >
+						<box id="person-level-progress-box"></box>
+					</box>
+					<grid id="person-info-grid">
+						<columns>
+							<column id="person-info-name-column" />
+							<column id="person-info-value-column" />
+						</columns>
+						<rows>
+							<row>
+								<label value="帐号" class="person-info-name-label" />
+								<description id="person-username-desc"  value="" />
+							</row>
+							<row>
+								<label value="昵称" class="person-info-name-label" />
+								<description id="person-nickname-desc"   value="" />
+							</row>
+							<row>
+								<label value="等级" class="person-info-name-label"  />
+								<description id="person-level-desc"   value="1" />
+							</row>
+							<row>
+								<label value="积分" class="person-info-name-label" />
+								<description id="person-point-desc"   value="" />
+							</row>
+							<row>
+								<label value="类型" class="person-info-name-label" />
+								<description id="person-usertype-desc"   value="" />
+							</row>
+							<row>
+								<label value="IP" class="person-info-name-label"  />
+								<description id="person-realip-desc"  crop="end"   value="" />
+							</row>
+							<row>
+								<label value="地点" class="person-info-name-label"  />
+								<description id="person-iplocation-desc" crop="end"   value="" />
+							</row>
+						</rows>
+					</grid>
+				</tabpanel>
+				<!-- 个人 End -->
+
+				<tabpanel orient="vertical">
+					<richlistbox id="user-friend-list" ondblclick="UserFriend.chatToSelected()" >
+						<listhead >
+							<listheader flex="2" />
+							<listheader flex="1" />
+						</listhead>
+					</richlistbox>
+				</tabpanel>
+
+				<!-- 战队 Begin -->
+				<tabpanel  id="aide-myteam-tabpanel" orient="vertical" >
+					<groupbox id="myteam-info-box" >
+						<caption id="myteam-info-caption" label="我的战队" />
+						<grid id="myteam-info-grid">
+							<columns>
+								<column flex="1" />
+								<column flex="1" />
+							</columns>
+							<rows>
+								<row>
+									<label value="战队ID" />
+									<label id="myteam-id-label" class="myteam-info-value" value="" />
+								</row>								
+								<row>
+									<label value="战队名" />
+									<label id="myteam-name-label" class="myteam-info-value" value="" />
+								</row>			
+								<row>
+									<label value="积分" />
+									<label id="myteam-point-label" class="myteam-info-value" value="-" />
+								</row>			
+								<row>
+									<label value="成员数" />
+									<label id="myteam-membercount-label" class="myteam-info-value" value="0" />
+								</row>			
+							</rows>
+						</grid>
+					</groupbox>
+					<box id="myteam-buttons-box" pack="center" >
+						<button id="goto-teamspace-button" label="战队空间" oncommand="Team.gotoMyTeam()" />
+						<button id="refresh-team-button" label="刷新" oncommand="Team.refreshMyTeam()" />
+					</box>
+					<groupbox flex="1" id="myteam-members-box" >
+						<caption id="myteam-members-caption" label="战队成员" />
+						
+						<tree id="myteam-members-tree" flex="1" hidecolumnpicker="true" seltype="single" context="team-member-menupopup" >
+							<treecols>
+								<treecol hidden="true" />
+								<treecol label="成员" flex="3"  />
+								<splitter />
+								<treecol label="等级" flex="1"  />
+							</treecols>
+							<treechildren id="myteam-members-treechildren"   ondblclick="Team.chatToSelected()">
+							</treechildren>
+						</tree>
+					</groupbox>
+				</tabpanel>
+				<!-- 战队 End -->
+
+				<!-- 房间 Begin -->
+				<tabpanel id="room-users-tabpanel">
+					<richlistbox id="room-users-list"  ondblclick="RoomUser.chatToSelected()" >
+						<listhead >
+							<listheader flex="2" />
+							<listheader flex="1" />
+						</listhead>
+						<richlistitem hidden="true">
+							<image />
+							<vbox>
+								<label class="room-user-status" />
+								<label class="room-user-level" />
+							</vbox>
+						</richlistitem>
+					</richlistbox>
+				</tabpanel>
+				<!-- 房间 End -->
+
+			</tabpanels>
+		</tabbox>
+		<box id="aide-foot-box">
+		
+		</box>
+	</vbox>
+</overlay>

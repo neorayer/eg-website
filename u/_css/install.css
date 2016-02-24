@@ -1,0 +1,50 @@
+#user-install-box{
+	min-height:300px;
+	height:auto!important;
+    height:300px;
+    border:1px solid gray;
+    background-color: #E1E2E2;
+    margin-bottom:10px;
+}
+.user-install-title{
+	height:50px;
+	font-size:18px;
+	font-weight:bold;
+	line-height:50px;
+	padding-left:20px;
+	color:black;
+	
+}
+  
+.user-install-items-box{
+	padding:10px 20px;
+}
+.user-install-items-box li{
+	margin-left:10px;
+	display:inline;
+	width:80px;
+	border:1px solid gray;
+	height:25px;
+	line-height:25px;
+	float:left;
+	color:black;
+	text-align:center;
+}
+#page-user-install-personallsetting-box{
+	float: right;
+	line-height: 50px;
+	padding-right: 10px;
+	
+}
+.user-install-sign{
+	padding-left:50px;
+	height:20px;
+	line-height:20px;
+	border-bottom:1px dashed gray;
+}
+#user-install-main-box{
+	background-color: white;
+	margin: 20px 20px;
+	height: auto;
+	padding: 10px 10px 10px 10px;
+}

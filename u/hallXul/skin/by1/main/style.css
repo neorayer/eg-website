@@ -1,0 +1,877 @@
+window {
+	font-size: 12px;
+	background-image: url(blue-bg.jpg);
+	border: 2px solid black;
+	font-family: arial;
+}
+
+#head-box {
+	background-image: url(bgstyle.jpg);
+}
+
+#winhead-top-box {
+	background-image: url(rednav-c.png);
+	background-repeat: repeat-x;
+}
+
+#head-bg-box {
+	background-image: url(rednav-r.png);
+	background-position: right -20px;
+	background-repeat: no-repeat;
+	height: 130px;
+}
+
+
+#head-menu-bg-box {
+	background-image: url(rednav-c.png);
+	background-repeat: repeat-x;
+	background-position: 0 -20px;
+	width: 823px;
+	height: 86px;
+	margin: 0 14px 0 0;
+}
+
+#head-menu-box {
+	margin:10px 20px 0 0;
+	padding:0px 0px 0 0 ;
+}
+
+#head-menu-box >button {
+	background-image: url(blue-nav-c.gif);
+	color: #DDCA8F;
+	height: 21px;
+	font-size: 12px;
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+#head-menu-box >button:hover {
+
+	color: #cfcfcf;
+}
+
+#neck-box {
+	padding: 10px 0 3px 0;
+}
+
+#msg-label {
+	margin:7px 0 0 0 ;
+	padding: 0 25px 0 25px;
+	background-image: url(newmsg.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	color: white;
+}
+
+#msg-label:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#neck2-box {
+	margin: 20px 20px 0 0;
+	color: white;
+	background-image: url(blacktrans-bg.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	width: 773px;
+	height: 23px;
+}
+
+#loading-label {
+	color: white;
+	text-align: left;
+	border:1px solid white;
+	background-image: url(../global/loading.gif);
+	background-repeat: no-repeat;
+}
+
+#logininfo-label {
+	background-image: url(time-icon.jpg);
+	background-repeat: no-repeat;
+	background-position: 5px 3px;
+	height: 30px;
+	width: 325px;
+	background-color: #590505;
+	border: 2px solid #7D0909;
+	padding: 6px 0 0 30px;
+	color: white;
+	margin: 0 20px 0 0;
+}
+
+#aide-avator-box {
+	background-image: url(avator-frame.jpg);
+	background-repeat: no-repeat;
+	width: 145px;
+	height: 197px;
+	margin: 5px 0 0 9px;
+}
+
+
+#aide-avator-image {
+	margin: 11px 0 0 10px;
+	background-image: url(avator-sample-1.jpg);
+	background-repeat: no-repeat;
+	width: 126px;
+	height: 176px;
+}
+
+#mod-userinfo-button {
+	color: gray;
+	outline: 1px solid gray;
+	margin: 5px 0 0 35px;
+	cursor: pointer;
+}
+
+#mod-userinfo-button:hover{
+	color: white;
+	outline: 1px solid white;
+}
+
+
+#person-info-grid {
+	margin: 13px 0 0 13px;
+}
+
+#person-info-grid row {
+	height: 20px;
+}
+
+#person-info-name-column {
+	width: 35px;
+}
+
+#person-info-value-column {
+}
+
+.person-info-name-label {
+	font-size: 12px;
+	color: #FFBA00;	
+}
+
+#person-info-grid description {
+	color: #FFFA84;	
+	width: 110px;
+}
+
+#person-level-progress-box {
+	margin: 10px 0 0 30px;
+	width: 102px;
+	height: 13px;
+	background-image: url(level-progress-bar.gif);
+}
+
+titlebar {
+	cursor: move;
+	background-image: url(bylogo.png);
+	background-repeat: no-repeat;
+}
+
+#logo {
+	background-image: url(bylogo.png);
+	background-repeat: no-repeat;
+	background-position: 0 -18px;
+}
+
+/***** #body-tabbox Begin *****/
+#body-box {
+	background-image: url(bgstyle.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+
+
+#body-tabbox {
+}
+
+#body-right-box {
+	width: 10px;
+	background-image: url(hall-bg-tr.jpg);
+	background-position: right top;
+	margin: 0 10px 20px -10px;
+}
+
+#body-tabbox>hbox {
+	background-image: url(hall-bg-tl.jpg);
+	background-position: 200px 0;
+	background-repeat: no-repeat;
+	height: 45px;
+	padding: 10px 0 0 220px;
+}
+
+#body-tabs {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#body-tabs>tab {
+	width: 80px;
+	background-image: url(yellow-icon.gif);
+	background-repeat: no-repeat;
+	background-position: 0 5px;
+	padding:0 0 0 31px;
+	color: white;
+}
+
+#body-tabs>tab:hover,
+#body-tabs>tab[selected="true"] {
+	color:#FBF41F;
+	background-image: url(select-icon.gif);
+	background-position: 0 6px;
+}
+
+/***** #body-tabbox End *****/
+#hallLeft {
+	padding: 15px 0 0 0;
+	width: 190px;
+	background-repeat: no-repeat;
+}
+
+#hallLeftFoot {
+}
+
+#hallCenter {
+	background-image: url(hall-bg-bl.jpg);
+	background-repeat: no-repeat;
+	background-position: 9px bottom;
+}
+
+#hallCenterFoot {
+	height: 38px;
+	background-image: url(hall-bg-br.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+/***** #gametype-list Begin ******/
+#gametype-list {
+	margin: -57px 0 0 15px;
+	background-image: url(blackitem-bg.jpg);
+	height: 391px;
+	padding: 0 10px 0 0;
+}
+
+#gametype-list listheader {
+	height: 48px;
+	margin-bottom: 10px;
+}
+
+#gametype-list #gameType_fight {
+	background-position: 0 0;
+}
+
+#gametype-list #gameType_street {
+	background-position: 0 -25px;
+}
+
+#gametype-list richlistitem {
+	margin: 0px 0px 8px 9px;
+	background-image: url(item-button.jpg);
+	background-repeat: no-repeat;
+	height: 46px;
+	cursor: pointer;
+}
+
+#gametype-list #game-war3rpg-listitem {
+	background-position: 0 0;
+}
+
+#gametype-list #game-war3rpg-listitem:hover,
+#gametype-list #game-war3rpg-listitem[selected="true"]{
+	background-position: 0 -46px;
+}
+
+#gametype-list #game-cs15-listitem {
+	background-position: -155px 0;
+}
+
+#gametype-list #game-cs15-listitem:hover,
+#gametype-list #game-cs15-listitem[selected="true"]{
+	background-position: -155px -46px;
+}
+
+#gametype-list #game-war3-listitem {
+	background-position: -310px 0;
+}
+
+#gametype-list #game-war3-listitem:hover,
+#gametype-list #game-war3-listitem[selected="true"] {
+	background-position: -310px -46px;
+}
+
+#gametype-list #game-cs16-listitem {
+	background-position: -465px 0;
+}
+
+#gametype-list #game-cs16-listitem:hover,
+#gametype-list #game-cs16-listitem[selected="true"]
+	{
+	background-position: -465px -46px;
+}
+
+#gametype-list #game-sc1-listitem {
+	background-position: -620px 0;
+}
+
+#gametype-list #game-sc1-listitem:hover,
+#gametype-list #game-sc1-listitem[selected="true"]
+	{
+	background-position: -620px -46px;
+}
+
+/***** #zone-list Begin *****/
+#zone-list {
+	background-image: url(sitem-bg.jpg);
+	background-repeat: no-repeat;
+	border: 3px solid #475A6D ;
+	border-right: none;
+	width: 93px;
+	margin: 35px 0 0 20px;
+	padding: 0 0 0 0;
+	height: 225px;
+}
+
+#zone-list label {
+	color: #C2C7CB;
+}
+
+#zone-list>richlistitem {
+	margin: 0 0px 0px 0;
+	height: 26px;
+	border-bottom: 1px solid #475A6D; 
+	padding: 3px 0 0 7px;
+	background-image: url(blue-icon.jpg);
+	background-repeat: no-repeat;
+	background-position: 1000px 1000px;
+}
+
+#zone-list>richlistitem button {
+	width: 70px;
+	padding: 0 0 0 5px;
+}
+
+#zone-list>richlistitem:hover,#zone-list>richlistitem[selected="true"] {
+	background-position: 5px 10px;
+}
+
+#zone-list>richlistitem:hover label,
+#zone-list>richlistitem[selected="true"] label {
+	color: yellow;
+}
+
+/***** #hallTabBox Begin *****/
+#hallTabBox {
+	margin: 3px 20px 0 0;
+}
+
+#hallTabBox #hallTabsBox {
+}
+
+#hallTabBox #hallTabsBox>tabs {
+	padding: 0 0 0 0;
+	background-repeat: no-repeat;
+	display: none;
+}
+
+#hallTabBox #hallTabsBox>tabs>tab {
+	display: none;
+	height: 33px;
+	width: 76px;
+	background-image: url(hall-tab.jpg);
+}
+
+#hallTabBox #pubRoomTab {
+	background-position: 0 0;
+}
+
+#hallTabBox #pubRoomTab:hover,#hallTabBox #pubRoomTab[selected="true"]
+	{
+	background-position: 0 -33px;
+}
+
+#hallTabBox #priRoomTab {
+	background-position: -76px 0;
+}
+
+#hallTabBox #priRoomTab:hover,#hallTabBox #priRoomTab[selected="true"]
+	{
+	background-position: -76px -33px;
+}
+
+#hallTabBox #hallTabsBox>tabs>tab#mapDownTab {
+	background-position: -152px 0;
+	width: 82px;
+}
+
+#hallTabBox #hallTabsBox>tabs>tab#mapDownTab:hover,#hallTabBox #hallTabsBox>tabs>tab#mapDownTab[selected="true"]
+	{
+	background-position: -152px -33px;
+	width: 82px;
+}
+
+#hallTabBox #roomsButtons {
+	padding:0 0 0 0;
+	margin: 0 0 3px 0;
+}
+
+#hallTabBox #roomsSpeedBtn {
+	display: none;
+}
+
+#hallTabBox #roomsRefreshBtn,#hallTabBox #roomsSpeedBtn {
+	background-image: url(ce.gif);
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 15px;
+	overflow: hidden;
+	margin: 0 0 0 4px;
+	cursor: pointer;
+	color: transparent;
+	padding: 0;
+}
+
+#hallTabBox #roomsRefreshBtn:hover,#hallTabBox #roomsSpeedBtn:hover {
+	
+}
+
+#body-tabpanels {
+	background-image: url(hall-bg-tl.jpg);
+	background-position: 200px -200px;
+	background-repeat: no-repeat;
+}
+/***** #hallTabBox End *****/
+#hall-tabpanels {
+}
+
+#hall-tabpanels>tabpanel {
+	border: 3px solid #475A6D; 
+	background-color: #0E151D;
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding: 0 0px 0 0 ;
+}
+
+#hall-pubrooms-tree {
+	color: #C2C7CB;
+}
+
+#hall-pubrooms-tree treecols {
+	border-bottom: 1px solid  #2B3E5F;
+}
+
+#hall-pubrooms-tree treecol{
+	color: #C2C7CB;
+}
+
+
+#hall-pubrooms-tree-room-col {
+	width: 130px;
+}
+
+
+#hall-pubrooms-tree-speed-col {
+	width: 80px;
+}
+
+scrollbarbutton {
+	 -moz-appearance:none;
+}
+
+scrollbarbutton:hover {
+	background-color: yellow;
+}
+
+thumb {
+	-moz-appearance:none;
+}
+
+#hall-tabpanels  treecols {
+	height: 33px;
+}
+
+#hall-tabpanels  treecol {
+	padding-left: 20px;
+}
+
+#hall-tabpanels  treechildren {
+	margin: 5px 5px 0 10px;
+}
+
+#hall-tabpanels  treechildren::-moz-tree-row {
+	height: 35px;
+	border-bottom: 1px dotted	#4F565E;
+}
+
+#hall-tabpanels  treechildren::-moz-tree-row(selected) {
+	background: transparent;
+}
+
+#hall-tabpanels  treechildren::-moz-tree-cell-text(selected) {
+	color: yellow;
+}
+
+
+#hall-tabpanels treechildren::-moz-tree-cell {
+	padding-left: 10px;
+}
+
+/**** aide ****/
+#aide-box {
+	background-image: url(userinfo.jpg);
+	background-repeat: no-repeat;
+	width: 174px;
+	overflow: hidden;
+	margin: 0 10px 0 0 ;
+}
+
+#aide-foot-box {
+	background-image: url(aide-foot.jpg);
+	background-position: left bottom;
+	height: 25px;
+}
+
+#aide-tabs {
+	margin: 7px 7px 0 7px;
+	background-image: url(gray-gra-bg.gif);
+}
+
+#aide-tabs>tab {
+	width: 40px;
+	height: 32px;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	background-image: url(blue-gra-bg.gif);
+	background-repeat: repeat-x;
+	background-position: 0 100px;
+}
+
+#aide-tabpanels >tabpanel {
+	padding: 5px;
+} 
+
+#aide-person-tab {
+}
+
+#aide-person-tab:hover,#aide-person-tab[selected="true"],
+#aide-team-tab:hover,#aide-team-tab[selected="true"],
+#aide-friend-tab:hover,#aide-friend-tab[selected="true"],
+#aide-room-tab:hover,#aide-room-tab[selected="true"] {
+	background-position: -120px 0;
+}
+
+#person-info-grid {
+	color: white;
+}
+
+#room-tabpanel {
+	background-image: url(hall-bg-tl.jpg);
+	background-repeat: no-repeat;
+	padding: 0 0 0 0;
+}
+
+#room-left-border-box {
+	width: 14px;
+}
+
+#room-right-border-box {
+	background-image: url(hall-bg-tr.jpg);
+	background-repeat: no-repeat;
+	background-position:right top;
+	width: 14px;
+}
+
+#room-path-box {
+}
+
+#room-path-icon-box {
+	width: 31px;
+	height: 31px;
+	background-image: url(fire-icon.jpg);
+}
+
+
+#room-path-label {
+	color: #FFFA84;
+	margin:8px 0 0 10px;
+}
+
+#room-upper-box {
+	background-image: url(room-upper-bg.jpg);
+	height: 187px;
+	margin-top: 10px;
+}
+
+#room-nether-box {
+
+	background-repeat: repeat-x;
+	background-position: 0 -15px; /* 注意：这个位置与#room-tabpanel splitter 的高度对应 */
+}
+
+#room-warkey-checkbox,
+#room-sfwin-checkbox,
+#room-xue-checkbox {
+	color: #FFFA84;
+}
+
+#room-tabpanel splitter{
+	height: 15px;
+}
+
+#room-tools-box {
+	padding:5px 13px 5px 12px;
+	background-image: url(hall-bg-tl.jpg);
+	background-position: -20px -10px ;
+}
+
+#room-tools-box button{
+	color: #FFFA84;
+	height: 25px;
+	cursor: pointer;
+}
+
+#room-backhall-button {
+}
+
+#room-backhall-button:hover {
+	outline:1px solid gray;
+}
+
+#room-startgame-button {
+	margin-left: 30px;
+}
+
+#room-startgame-button:hover {
+	outline:1px solid gray;
+}
+
+#room-chat-box {
+	background-color: #eeeeee;
+	border: 1px solid black;
+	margin:0 0 8px 0;
+	padding: 7px;
+}
+
+.room-chat-content-user-label {
+	cursor: pointer;
+	color: orange;
+}
+
+.fightres-chat-label {
+	color: orange;
+	cursor: pointer;
+}
+
+.fightres-chat-label:hover {
+	text-decoration: underline;
+	
+}
+
+.room-chat-content-user-label:hover {
+}
+
+.room-chat-scrollsep-box {
+	
+}
+
+#room-chat-send-box {
+	padding: 0 1px 0 0px;
+}
+
+#room-chat-textbox {
+	-moz-appearance: none;
+	background-color: white;
+	height: 26px;
+	border: 1px solid green;
+	padding: 5px 3px 5px 3px;
+	margin-right: 10px;
+}
+
+#room-chat-send-box button{
+	width:63px;
+	height: 29px;
+	background-image: url(blue-gra-bg.gif);
+	background-repeat: repeat-x;
+	color: #FFFA84;
+	cursor: pointer;
+}
+
+#room-chat-send-button {
+	background-position: 0 0;
+	margin-right:5px;
+}
+#room-chat-send-button:hover {
+	background-image: url(gray-gra-bg.gif);
+}
+
+#room-chat-face-button {
+}
+#room-chat-face-button:hover {
+	background-image: url(gray-gra-bg.gif);
+}
+
+#room-bottom-border-box {
+	height: 20px;
+}
+
+#room-bottom-left-border-box {
+	background-image: url(hall-bg-bl.jpg);
+	background-position: left bottom;
+	height: 20px;
+}
+#room-bottom-right-border-box {
+	background-image: url(hall-bg-br.jpg);
+	background-position: right bottom;
+	width: 20px;
+	height: 20px;
+}
+
+#room-users-tabpanel {
+}
+
+#room-users-list {
+	padding: 0 0 0 5px;
+}
+
+#room-users-list richlistitem,
+#room-users-list richlistitem[selected="true"]
+ {
+	background-image: url(user-bg.jpg);
+	height: 48px;
+	color: white;
+	width: 155px;
+	margin: 0 0 5px 0;
+	overflow: hidden;
+}
+
+#room-users-list richlistitem image {
+	margin: 11px 0 13px 11px;
+	width:	24px;
+}
+
+#room-users-list richlistitem vbox {
+	padding: 7px 0 0 9px;
+}
+
+#room-users-list .room-user-status {
+	overflow: hidden;
+}
+
+#room-users-list .room-user-level {
+	margin-left: 0px;
+	
+}
+
+/*************** aide-team-tabpanel **********/
+#aide-myteam-tabpanel {
+}
+
+#myteam-info-caption  {
+	color: white;
+	margin: 0 5px 0 5px;
+	background-color: black;
+}
+
+#myteam-info-box {
+	margin: 0 10px 0 5px;
+	padding: 10px 10px 5px 10px;
+}
+
+#myteam-info-grid {
+	
+}
+
+#myteam-info-grid row{
+	height: 18px;
+}
+
+#myteam-info-grid row label {
+	color: gray;
+}
+
+#myteam-info-grid row label.myteam-info-value {
+	color: white;
+}
+
+#myteam-members-box {
+	margin: 0 10px 30px 5px;
+	padding: 10px 10px 5px 10px;
+}
+
+#myteam-members-caption {
+	color: white;
+	margin: 0 5px 0 5px;
+	background-color: black;	
+}
+
+#myteam-members-tree {
+	color: #eeeeee;
+}
+
+#myteam-members-tree treecols {
+	height: 20px;
+}
+
+#myteam-members-tree treecol {
+	color: gray;
+	padding: 0 5px 0 5px;
+}
+
+#myteam-members-tree treeitem {
+	height: 18px;
+}
+
+
+#myteam-buttons-box {
+	margin: 5px 5px 5px 0px;
+}
+
+#myteam-buttons-box button{
+	background-repeat: no-repeat;
+	outline:1px solid gray;
+	width: 60px;
+	height: 21px;
+	cursor: pointer;
+	color: #eeeeee;
+	margin:0 3px 0 3px;
+}
+
+#myteam-buttons-box button:hover {
+	font-weight: bold;
+	color: white;
+}
+
+
+/***** user-friend-list *****/
+
+#user-friend-list {
+	padding: 0 0 0 5px;
+}
+
+#user-friend-list richlistitem,
+#user-friend-list richlistitem[selected="true"]{
+	background-image: url(user-bg.jpg);
+	background-repeat: no-repeat;
+	width: 155px;
+	height: 48px;
+	color: white;
+	margin: 0 0 5px 0;
+}
+
+#user-friend-list richlistitem image {
+	margin: 11px 0 13px 11px;
+	width:	24px;
+}
+
+#user-friend-list richlistitem vbox {
+	padding: 7px 0 0 9px;
+}
+
+#user-friend-list .user-friend-status {
+}
+
+#user-friend-list .user-friend-level {
+	
+}

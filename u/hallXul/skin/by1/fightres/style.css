@@ -1,0 +1,72 @@
+#fightres-title-box {
+
+}
+
+#fightres-title-label {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	height: 22px;
+	color: white;
+}
+
+#fightres-grid {
+	margin: 3px 20px 3px 20px;
+	color: white;
+}
+
+#fightres-label-col {
+	width: 60px;
+}
+
+
+#fightres-rows >row{
+	height: 18px;
+} 
+
+#fightres-rows >row>box {
+	padding:3px 0 0 5px;
+}
+
+.fightres-grid-label-box {
+	font-weight: bold;
+}
+
+#fightres-team-row {
+	font-weight: bold;
+	border-bottom: 1px solid brown;
+}
+
+#fightres-winlose-row {
+	border-bottom: 1px solid brown;
+}
+
+#fightres-win-label {
+	color: red;
+	font-weight: bold;
+}
+
+#fightres-lose-label {
+	color: green;
+	font-weight: bold;
+}
+
+#fightres-host-row {
+	border-bottom: 1px dashed brown;
+}
+
+#fightres-race-row {
+	border-bottom: 1px dashed brown;
+}
+
+.fightres-player-row {
+	border-bottom: 1px dashed #eeeeee;
+}
+
+.fightres-player-row vbox {
+	padding:3px 0 0 5px;
+}
+
+.fightres-player-row label {
+	height: 16px;
+}

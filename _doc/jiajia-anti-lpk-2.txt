@@ -1,0 +1,103 @@
+/*
+//函数原型
+UINT_PTR SetTimer(
+  HWND hWnd,              		// 窗口句柄
+  UINT_PTR nIDEvent,     	// 定时器ID，多个定时器时，可以通过该ID判断是哪个定时器
+  UINT uElapse,           		// 时间间隔,单位为毫秒
+  TIMERPROC lpTimerFunc   	// 回调函数
+);
+
+//函数转换
+UINT SetTimer(UINT nIDEvent,UINT nElapse,void(CALLBACK EXPORT *lpfnTimer)(HWND,UINT ,YINT ,DWORD)) 
+*/
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//反MH原理 (By JiaJia) ：
+//此处采用定时器CALLBACK的方式反MH，代码嵌入通信模块gf.dll中。平台主程序也可以加入此段。
+//这里要注意的是，请勿单独创建线程来执行检测MH，一定要跟通信的线程在一起。
+//这种方法强度比HF强，HF中使用的是创建一个单独的线程检测MH，但是这种方法可以通过挂起线程废掉。
+//创建两个定时器，一个定时器被Patch之后使用另一个另一个还可以执行某些特定操作。
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//在MFC程序中SetTimer被封装在CWnd类中，作为DLL还是要转换为HWND。
+CWnd *pWnd = FindWindow("Warcraft III","Warcraft III"); 	//获取魔兽争霸窗口的CWnd
+HWND hWnd = pWnd->GetSafeHwnd(); 						//CWnd转换为HWND (标准窗口句柄)
+
+//创建定时器 nIDEvent=1
+::SetTimer(GetSafeHwnd(),1,5000,(TIMERPROC)OnTimerProc);
+//创建定时器 nIDEvent=2
+::SetTimer(GetSafeHwnd(),2,10000,(TIMERPROC)OnTimerProc);
+
+//干掉定时器 nIDEvent=1
+::KillTimer(GetSafeHwnd(),1);
+//干掉定时器 nIDEvent=2
+::KillTimer(GetSafeHwnd(),1);
+
+//By JiaJia
+//定时检测Game.DLL区段内存是否被修改，修改则判定为MH作弊。
+VOID CALLBACK OnTimerProc(HWND hwnd,UINT uMsg,UINT_PTR idEvent,DWORD dwTime)   
+{
+	//地址 (前九位为大地图，后九位为小地图。)
+	LPCVOID ScanAddr[] = { (LPCVOID)0x6F4069F7, (LPCVOID)0x6F4069F8, (LPCVOID)0x6F4069F9, 
+						   (LPCVOID)0x6F4069FA, (LPCVOID)0x6F406B30, (LPCVOID)0x6F406B4E,
+						   (LPCVOID)0x6F406B4F, (LPCVOID)0x6F406B50, (LPCVOID)0x6F406B53,
+						   (LPCVOID)0x6F321CC4, (LPCVOID)0x6F321CC7, (LPCVOID)0x6F321CD7,
+						   (LPCVOID)0x6F321CD9, (LPCVOID)0x6F1494E0, (LPCVOID)0x6F1494E3,
+						   (LPCVOID)0x6F124DDD, (LPCVOID)0x6F124DE0, (LPCVOID)0x6F1491A8,
+						   (LPCVOID)0x99769F7, (LPCVOID)0x99769F8, (LPCVOID)0x99769F9, 
+						   (LPCVOID)0x99769FA, (LPCVOID)0x9976B30, (LPCVOID)0x9976B4E,
+						   (LPCVOID)0x9976B4F, (LPCVOID)0x9976B50, (LPCVOID)0x9976B53,
+						   (LPCVOID)0x9891CC4, (LPCVOID)0x9891CC7, (LPCVOID)0x9891CD7,
+						   (LPCVOID)0x9891CD9, (LPCVOID)0x96B94E0, (LPCVOID)0x96B94E3,
+						   (LPCVOID)0x9694DDD, (LPCVOID)0x9694DE0, (LPCVOID)0x96B91A8 };
+	//数值
+	byte W3MEM[] = { (byte)0x66, (byte)0x8B, (byte)0x50, (byte)0x3C, (byte)0x74, (byte)0x8B, (byte)0x49, (byte)0x4, (byte)0x8B,
+					 (byte)0x85, (byte)0x84, (byte)0x85, (byte)0x74, (byte)0x85, (byte)0x84, (byte)0x85, (byte)0x84, (byte)0x1,
+					 (byte)0x66, (byte)0x8B, (byte)0x50, (byte)0x3C, (byte)0x74, (byte)0x8B, (byte)0x49, (byte)0x4, (byte)0x8B,
+					 (byte)0x85, (byte)0x84, (byte)0x85, (byte)0x74, (byte)0x85, (byte)0x84, (byte)0x85, (byte)0x84, (byte)0x1 };
+
+	HANDLE hProcess;
+	byte tmpW3MEM;
+	bool tmpMARK=false;
+	bool bRead=false;
+	
+	switch (idEvent)
+	{
+	//定时器1
+	case 1:
+		//打开当前进程(即War3.exe)，获取进程句柄。
+		hProcess=(OpenProcess(PROCESS_VM_READ,false,GetCurrentProcessId());
+		if (hProcess!=NULL){
+			//for (int N=0; N <= sizeof(W3MEM); N++) {
+			for (int N=0; N <= sizeof(W3MEM); N=N+9) {
+				tmpMARK=false;	//初始化标记变量
+				for (int I=N; I <= N+8; I++) {
+					bRead = ReadProcessMemory(hProcess,ScanAddr[I],tmpW3MEM,1,NULL);
+					if (bRead==true){
+					if (tmpW3MEM!=W3MEM[I]){
+						tmpMARK=true;
+						break;	//跳出循环
+					}
+					}
+				}
+				if (tmpMARK==true){
+					zr_log_debug_ec(0, "发现作弊!");
+					//结束War3.exe
+					TerminateProcess(hProcess,0);
+					/*
+					(预留：该作弊用户账号处理代码部分)
+					*/
+				}//else{zr_log_debug_ec(0, "内存正常！"); }
+			}
+		}else{
+			//OutputDebugString("无法打开当前进程！");
+			zr_log_debug_ec(0, "无法打开当前进程！");
+		}
+		break;
+	case 2:
+		//第二个定时器CALLBACK，预留执行特定内容。
+		break;
+	case else:
+		break;
+	}
+}

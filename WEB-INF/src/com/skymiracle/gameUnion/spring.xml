@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- db -->
+	<bean id="DbcpPoolEg" class="com.skymiracle.mdo5.jdbcPool.DbcpJdbcPool">
+		<property name="jdbcDriver" value="${eg.jdbcDriver}" />
+		<property name="url" value="${eg.url}" />
+		<property name="username" value="${eg.username}" />
+		<property name="password" value="${eg.password}" />
+	</bean>  
+
+	<bean id="DbcpPoolBisai" class="com.skymiracle.mdo5.jdbcPool.DbcpJdbcPool">
+		<property name="jdbcDriver" value="${bisai.jdbcDriver}" />
+		<property name="url"
+			value="${bisai.url}" />
+		<property name="username" value="${bisai.username}" />
+		<property name="password" value="${bisai.password}" />
+	</bean>
+	
+	<bean id="StoreEg"
+		class="com.skymiracle.mdo5.RdbmsStore">
+		<property name="jdbcPool">
+			<ref local="DbcpPoolEg" />
+		</property>
+		
+		<property name="mdoCache" >
+			<bean class="com.skymiracle.mdo5.cache.MdoCacheMemcached">
+				
+				<property name="servers">
+					<list>  
+						<value>${eg.memcached}</value>  
+					</list>  
+				</property>
+				
+			</bean>
+		</property>
+	</bean>
+	<bean id="StoreBisai"
+		class="com.skymiracle.mdo5.RdbmsStore">
+		<property name="jdbcPool">
+			<ref local="DbcpPoolBisai" />
+		</property>
+		<property name="mdoCache" >
+			<bean class="com.skymiracle.mdo5.cache.MdoCacheMemcached">
+				
+				<property name="servers">
+					<list>  
+						<value>${bisai.memcached}</value>  
+					</list>  
+				</property>
+				
+			</bean>
+		</property>
+	</bean>
+	<!-- end -->
+	
+	<!-- StoreBisai -->
+	<bean id="BisaiX" class="com.skymiracle.gameUnion.models.bisai.Bisai$X">
+		<property name="store" >
+			<ref local="StoreBisai" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.bisai.Bisai" />
+	</bean>
+
+	<bean id="SignUpUserX" class="com.skymiracle.gameUnion.models.SignUpUser$X">
+		<property name="store" >
+			<ref local="StoreBisai" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.SignUpUser" />
+	</bean>
+	<!-- end -->
+		
+	<!-- User -->
+	<bean id="UserX" class="com.skymiracle.gameUnion.models.User$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.User" />
+		<property name="memCache">
+			<ref local="MemCache" />
+		</property>
+		<property name="fileStoreRootPath" value="${user.fileStoreRootPath}" />
+	</bean>
+	
+	<bean id="MemCache" class="com.skymiracle.gameUnion.runtime.MemCache" >
+	
+		<property name="servers">
+			<list>  
+				<value>${runtime.memcached}</value>  
+			</list>  
+		</property>
+	
+	</bean>
+	<!-- end -->
+	
+	<!-- Team -->
+	<bean id="GameTeamX" class="com.skymiracle.gameUnion.models.team.GameTeam$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.team.GameTeam" />
+		<property name="fileStoreRootPath" value="${team.fileStoreRootPath}" />
+		<property name="fileHttpRootPath" value="${team.fileHttpRootPath}" />
+		<property name="teamLogoFName" value="${team.teamLogoFName}" />
+	</bean>
+	
+	<bean id="TeamMemberX" class="com.skymiracle.gameUnion.models.team.TeamMember$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.team.TeamMember" />
+	</bean>
+	
+	<bean id="TeamRoleX" class="com.skymiracle.gameUnion.models.team.TeamRole$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.team.TeamRole" />
+	</bean>
+	
+	<bean id="TeamRolePowerX" class="com.skymiracle.gameUnion.models.team.TeamRolePower$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.team.TeamRolePower" />
+	</bean>
+	
+	<bean id="AuthorityX" class="com.skymiracle.gameUnion.models.Authority$X">
+		<property name="itemsMap">
+			<map >
+				<entry key="vi_member">
+					<bean class="com.skymiracle.gameUnion.models.Authority">
+						<property name="code" value="vi_member" />
+						<property name="desc" value="查看成员" />
+					</bean>
+				</entry>
+				<entry key="approval_apply">
+					<bean class="com.skymiracle.gameUnion.models.Authority">
+						<property name="code" value="approval_apply" />
+						<property name="desc" value="审批申请" />
+					</bean>
+				</entry>
+				<entry key="group_msg">
+					<bean class="com.skymiracle.gameUnion.models.Authority">
+						<property name="code" value="group_msg" />
+						<property name="desc" value="群发消息" />
+					</bean>
+				</entry>
+				<entry key="manage_role">
+					<bean class="com.skymiracle.gameUnion.models.Authority">
+						<property name="code" value="manage_role" />
+						<property name="desc" value="职位管理" />
+					</bean>
+				</entry>
+				<entry key="manage_member">
+					<bean class="com.skymiracle.gameUnion.models.Authority">
+						<property name="code" value="manage_member" />
+						<property name="desc" value="成员管理" />
+					</bean>
+				</entry>
+				<entry key="team_integral">
+					<bean class="com.skymiracle.gameUnion.models.Authority">
+						<property name="code" value="team_integral" />
+						<property name="desc" value="比赛增加积分" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>			
+	
+	<!-- sequence -->
+	<bean id="SequenceX" class="com.skymiracle.gameUnion.models.Sequence$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Sequence" />
+	</bean>
+	
+	<!-- message -->
+	<bean id="TeamMsgX" class="com.skymiracle.gameUnion.models.msg.TeamMsg$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.msg.TeamMsg" />
+	</bean>
+	
+	<bean id="UserMsgX" class="com.skymiracle.gameUnion.models.msg.UserMsg$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.msg.UserMsg" />
+	</bean>
+	
+	<bean id="CommentMsgX" class="com.skymiracle.gameUnion.models.msg.CommentMsg$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.msg.CommentMsg" />
+	</bean>
+
+	<bean id="AbsMdoX" class="com.skymiracle.gameUnion.models.AbsMdo$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.AbsMdo" />
+	</bean>
+
+	<bean id="UserInfoX" class="com.skymiracle.gameUnion.models.UserInfo$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.UserInfo" />
+	</bean>
+
+	<bean id="AlbumX" class="com.skymiracle.gameUnion.models.Album$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Album" />
+	</bean>
+	
+	<bean id="UserFriendX" class="com.skymiracle.gameUnion.models.UserFriend$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.UserFriend" />
+	</bean>
+	
+	<bean id="FriendSettingX" class="com.skymiracle.gameUnion.models.FriendSetting$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.FriendSetting" />
+	</bean>
+	
+	<bean id="LtMsgReqAddFriendX" class="com.skymiracle.gameUnion.models.msg.LtMsgReqAddFriend$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.msg.LtMsgReqAddFriend" />
+	</bean>
+
+	<bean id="PubPostX" class="com.skymiracle.gameUnion.models.post.PubPost$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.post.PubPost" />
+	</bean>
+
+	<bean id="ServerVersionX" class="com.skymiracle.gameUnion.models.version.ServerVersion$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.version.ServerVersion" />
+	</bean>
+
+	<bean id="CurVersionX" class="com.skymiracle.gameUnion.models.version.CurVersion$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.version.CurVersion" />
+	</bean>
+	<bean id="FightLogX" class="com.skymiracle.gameUnion.models.FightLog$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.FightLog" />
+	</bean>
+	
+	<bean id="GameMapX" class="com.skymiracle.gameUnion.models.GameMap$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.GameMap" />
+		<property name="fileStoreRootPath" value="${gamemap.fileStoreRootPath}" />
+	</bean>
+	
+	<bean id="RtMsgX" class="com.skymiracle.gameUnion.models.msg.RtMsg$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.msg.RtMsg" />
+	</bean>
+	
+	<bean id="IpLocX" class="com.skymiracle.gameUnion.models.IpLoc$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.IpLoc" />
+	</bean>
+
+	<bean id="OrgX" class="com.skymiracle.gameUnion.models.org.Org$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.org.Org" />
+	</bean>
+	
+	<bean id="OrgAdminX" class="com.skymiracle.gameUnion.models.org.OrgAdmin$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.org.OrgAdmin" />
+	</bean>
+
+	<bean id="HallX" class="com.skymiracle.gameUnion.models.hall.Hall$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.hall.Hall" />
+		<property name="fileStoreDir" value="/tmp" />
+	</bean>
+
+	<bean id="HallMenuItemX" class="com.skymiracle.gameUnion.models.hall.HallMenuItem$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.hall.HallMenuItem" />
+	</bean>
+	
+	<bean id="RootAdminX" class="com.skymiracle.gameUnion.models.RootAdmin$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.RootAdmin" />
+	</bean>
+	
+	<bean id="GameX" class="com.skymiracle.gameUnion.models.Game$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Game" />
+	</bean>
+	
+	<bean id="GameZoneX" class="com.skymiracle.gameUnion.models.GameZone$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.GameZone" />
+	</bean>
+	<bean id="GameRoomX" class="com.skymiracle.gameUnion.models.GameRoom$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.GameRoom" />
+	</bean>
+	
+	
+	<bean id="MatchX" class="com.skymiracle.gameUnion.models.bisai.Match$X">
+		<property name="store" >
+			<ref local="StoreBisai" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.bisai.Match" />
+		<property name="fileStoreRootPath" value="${match.fileStoreRootPath}" />
+	</bean>
+	
+	
+	
+	<!-- eg2 -->
+	
+	<bean id="MatchTypeX" class="com.skymiracle.gameUnion.models.MatchType$X">
+		<property name="itemsMap">
+			<map >
+				<entry key="z3">
+					<bean class="com.skymiracle.gameUnion.models.MatchType">
+						<property name="id" value="z3" />
+						<property name="name" value="真三国无双" />
+					</bean>
+				</entry>
+				<entry key="dota">
+					<bean class="com.skymiracle.gameUnion.models.MatchType">
+						<property name="id" value="dota" />
+						<property name="name" value="DOTA" />
+					</bean>
+				</entry>
+				<entry key="war31v1">
+					<bean class="com.skymiracle.gameUnion.models.MatchType">
+						<property name="id" value="war31v1" />
+						<property name="name" value="魔兽争霸1v1" />
+					</bean>
+				</entry>
+				<entry key="war32v2">
+					<bean class="com.skymiracle.gameUnion.models.MatchType">
+						<property name="id" value="war32v2" />
+						<property name="name" value="魔兽争霸2v2" />
+					</bean>
+				</entry>
+				<entry key="sc1v1">
+					<bean class="com.skymiracle.gameUnion.models.MatchType">
+						<property name="id" value="sc1v1" />
+						<property name="name" value="星际争霸1v1" />
+					</bean>
+				</entry>
+				<entry key="cs5v5">
+					<bean class="com.skymiracle.gameUnion.models.MatchType">
+						<property name="id" value="cs5v5" />
+						<property name="name" value="CS5v5" />
+					</bean>
+				</entry>
+				
+			</map>
+		</property>
+	</bean>			
+	
+	<bean id="TeamProInfoX" class="com.skymiracle.gameUnion.models.team.TeamProInfo$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.team.TeamProInfo" />
+	</bean>
+	
+	
+	<bean id="UserProInfoX" class="com.skymiracle.gameUnion.models.user.UserProInfo$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.user.UserProInfo" />
+	</bean>
+	
+		
+	<bean id="ArticleX" class="com.skymiracle.gameUnion.models.Article$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Article" />
+	</bean>
+	
+	<bean id="AttachmentX" class="com.skymiracle.gameUnion.models.Attachment$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Attachment" />
+	</bean>
+	
+	<bean id="PhotoX" class="com.skymiracle.gameUnion.models.Photo$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Photo" />
+		<property name="fileStoreRootPath" value="${user.fileStoreRootPath}" />
+	</bean>
+	
+	<bean id="UserpointX" class="com.skymiracle.gameUnion.models.Userpoint$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Userpoint" />
+	</bean>
+	
+	<bean id="UserEgHistoryX" class="com.skymiracle.gameUnion.models.user.UserEgHistory$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.user.UserEgHistory" />
+	</bean>
+	
+	<bean id="UserBattleFriendX" class="com.skymiracle.gameUnion.models.user.UserBattleFriend$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.user.UserBattleFriend" />
+	</bean>
+	
+	
+	<bean id="TeampointX" class="com.skymiracle.gameUnion.models.Teampoint$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Teampoint" />
+	</bean>
+	
+	<bean id="ReputationX" class="com.skymiracle.gameUnion.models.Reputation$X">
+		<property name="store" >
+			<ref local="StoreBisai" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Reputation" />
+	</bean>
+	
+	<bean id="SignUpTeamMemberX" class="com.skymiracle.gameUnion.models.bisai.SignUpTeamMember$X">
+		<property name="store" >
+			<ref local="StoreBisai" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.bisai.SignUpTeamMember" />
+	</bean>
+	
+	
+	<bean id="TeamBbsX" class="com.skymiracle.gameUnion.models.team.TeamBbs$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.team.TeamBbs" />
+	</bean>
+	<bean id="WarZoneX" class="com.skymiracle.gameUnion.models.WarZone$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.WarZone" />
+	</bean>
+	
+	<bean id="UserCallerX" class="com.skymiracle.gameUnion.models.user.UserCaller$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.user.UserCaller" />
+	</bean>
+	
+	<bean id="ReplayHistoryX" class="com.skymiracle.gameUnion.models.ReplayHistory$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.ReplayHistory" />
+	</bean>
+	
+	<bean id="ReplayX" class="com.skymiracle.gameUnion.models.Replay$X">
+		<property name="store" >
+			<ref local="StoreBisai" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Replay" />
+	</bean>
+	
+	<bean id="FreshMsgX" class="com.skymiracle.gameUnion.models.FreshMsg$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.FreshMsg" />
+	</bean>
+	
+	<bean id="FightHistoryX" class="com.skymiracle.gameUnion.models.FightHistory$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.FightHistory" />
+	</bean>
+	
+	<bean id="MessageBoardX" class="com.skymiracle.gameUnion.models.MessageBoard$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.MessageBoard" />
+	</bean>
+	
+	<bean id="DuelX" class="com.skymiracle.gameUnion.models.Duel$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Duel" />
+	</bean>
+	
+	<bean id="CommentX" class="com.skymiracle.gameUnion.models.Comment$X">
+		<property name="store" >
+			<ref local="StoreEg" />
+		</property>
+		<property name="mdoClass" value="com.skymiracle.gameUnion.models.Comment" />
+	</bean>
+ 
+</beans>
+
+	

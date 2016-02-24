@@ -1,0 +1,352 @@
+/****************************************
+* teams
+***************************************/
+#index-teams-top-box {
+	background-color: #ffffff;
+	border:1px solid #969696;
+}
+
+ #index-teams-box {
+	margin-top:10px;	
+ }
+ 
+ #index-team-middle-box {
+	margin-top: 10px;
+ }
+ 
+ /*teams head*/
+
+ #index-teams-head-box {
+	background:url(images/arrow.gif) 15px center no-repeat;
+	height: 30px;
+	border-bottom:1px dotted #e3e3e3;
+	text-align: left;
+	padding-left: 35px;
+	line-height: 30px; 
+	color: #73A61D;
+ }
+
+ /***********************************************
+ * allList
+ ***********************************************/ 
+ #team-allList-search-form-box{
+ 	text-align:left;
+ 	margin-bottom: 10px;
+ }
+ 
+ #page-team-alllist-table-box{
+	text-align: center;
+	width: 100%;
+ }
+ 
+ #page-team-pagebar-box table {
+ 	text-align: center;
+ 	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	margin-bottom:15px;
+ }
+ 
+ #page-team-alllist-table-box thead th {
+ 	color: #73A61D;
+	height: 24px;
+	line-height:30px;
+	border-bottom:1px dotted #e3e3e3;
+ }
+ #page-team-alllist-table-box tbody tr.main td {
+	height: 30px;
+	background-color:#eeeeee;
+ }
+
+/****************************************
+* creating
+***************************************/
+ #page-team-creating-box {
+	border:1px solid #969696;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 620px;
+ }
+ 
+ #page-team-creating-top-box {
+ 	height: 30px;
+	line-height: 30px;
+	background-color: #71A4B9;
+	color: #ffffff;
+	font-weight: bold;
+	padding-left:10px;
+ }
+ 
+ #page-team-creating-form-box{
+ }
+ 
+ #page-team-creating-form-box ul {
+ 	height: 100%;
+ }
+ 
+ #page-team-creating-form-box li {
+	line-height: 30px;
+ 	clear: both;
+ }
+
+ #page-team-creating-form-box .label {
+ 	width:80px;
+ 	float: left;
+ 	text-align: right;
+ 	margin-right: 5px;
+ 	margin-top: 5px;
+ }
+ 
+ #page-team-creating-form-box .input-box {
+ 	float: left;
+ 	width: 200px;
+ 	margin-top: 8px;
+ }
+ 
+ #page-team-creating-form-box .input-box textarea {
+ 	width: 350px;
+	height:80px;
+ 	overflow: hidden;
+ 	text-align: left;
+ 	font-size: 12px;
+ }
+ 
+ #page-team-creating-form-box .tips {
+ 	width: 200px;
+ 	float: right;
+ }
+ 
+ 
+ #page-team-creating-form-bottom-box {
+ 	clear: both;
+ 	padding-top: 10px;
+	padding-left:120px;
+ 	height: 30px;
+ }
+
+/***********************************************
+ * teamintro
+ ***********************************************/
+ 
+ #page-team-teamintro-body-box {
+ 	width: 100%;
+ }
+ 
+ #page-team-teamintro-body-box td {
+	border-bottom: 1px dashed #969696;
+	padding: 8px 0px;
+ }
+ 
+ #page-team-teamintro-body-box .label {
+ 	padding-right: 30px;
+	width: 60px;
+ }
+ 
+ #page-team-teamintro-body-box .content {
+ }
+ 
+ /*teamMembers*/
+ 
+ #team-teammembers-search-form {
+ 	margin-bottom: 10px;
+ 	height:25px;
+ 	line-height:25px;
+ 	padding-left:10px;
+ 	font-size:13px;
+ }
+ 
+ #team-teammembers-list-box{
+ 	width: 100%;
+ }
+ 
+ #team-teammembers-list-box thead td {
+ 	color: #73A61D;
+ 	font-weight: bold;
+ 	border-bottom:1px solid #969696;
+ 	height: 30px;
+ }
+ 
+ #team-teammembers-list-box tbody tr.hover td{
+	background-color: orange;
+ }
+ 
+ #team-teammembers-list-box tbody .main{
+ 	height: 30px;
+ 	cursor: pointer;
+ }
+ 
+ /*detail*/
+ #team-teammembers-list-box tbody .detail{
+ 	display: none;
+ }
+ 
+ #team-teammembers-list-detail-box {
+ 	border:1px solid gray;
+ 	margin: 2px;
+	background: #eeeeee;
+ }
+ 
+  #team-teammembers-list-detail-box table {
+	text-align: left;
+	width: 60%;
+	margin: 10px;
+  }
+  
+  #team-teammembers-list-detail-box table td {
+  	border-bottom: 1px dotted #ffffff;
+  }
+ 
+  /* edit */
+ #team-teammembers-list-box tbody .edit{
+ 	display: none;
+ }
+ 
+ #team-teammembers-list-edit-box {
+ 	text-align: center;
+ 	width: 80%;
+ 	padding: 0px 20px;
+ 	border:1px solid gray;
+ 	margin: 3px auto;
+	background: #eeeeee;
+ }
+ 
+  #team-teammembers-list-edit-box table {
+	text-align: left;
+  }
+  
+  #team-teammembers-list-edit-box table td {
+  	border-bottom: 1px dotted #ffffff;
+  }
+ 
+ 
+ /* pagebar */
+ #page-team-teammembers-pagebar-box{
+	text-align:center; 
+ }
+ 
+ /* team_mod page */
+ 
+ #page-team-mod-form{
+ 	margin-left: auto;
+ 	margin-right: auto;
+ }
+
+ #page-team-mod-form img {
+  	display: block;
+  	border: 1px dotted #eeeeee;
+  	padding: 2px;
+  	margin-bottom: 5px;
+ }
+  
+ #page-team-mod-form textarea {
+ 	font-size: 12px;
+ }
+ 
+ #page-team-mod-tail-box {
+ 	padding-top:20px;
+	padding-left:120px;
+ 	height: 30px;
+ }
+
+ /*vi_Team*/
+ #page-team-vi-box {
+ 	margin-top:10px;
+	width:620px;
+ }
+
+ #page-team-vi-table-box {
+ 	width: 100%;
+ }
+ 
+ #page-team-vi-table-box td {
+	border-bottom: 1px dashed #969696;
+	padding: 8px 0px;
+ }
+ 
+ #page-team-vi-table-box .label {
+ 	padding-right: 30px;
+	width: 60px;
+ }
+ 
+ #page-team-vi-table-box .content {
+ }
+ 
+/* portlet page */
+
+#team-portlet-creating-nav-box,
+#team-portlet-addToTeam-nav-box {
+	float: left;
+	width: 48%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+
+#team-portlet-creating-box {
+	display: none;
+}
+
+#team-portlet-team-box {
+	margin-top: 10px;
+	border:1px solid #cccccc;
+	padding: 2px;
+}
+
+
+
+/* team page */
+#tabs-team-box {
+	padding: 10px 0px;
+}
+
+#team-image-box {
+	float: left;	
+	margin: 10px;
+	border: 1px solid gray;
+	padding: 2px;*padding-bottom: 0px;
+	background-color: #eeeeee;
+}
+
+#team-intro-box {
+	float: left;
+}
+
+#team-intro-box li {
+	border-bottom: 1px solid #818181;
+	vertical-align: top;
+	padding-left: 10px;
+	line-height:162%;
+	margin: 3px;
+}
+
+#team-memo-box {
+	clear: both;
+	margin-left: 10px;
+	_margin-left: 20px;
+}
+
+#team-logo-mod-button-box {
+	text-align: center;
+	margin-top: 3px;
+}
+
+
+
+/* teams page */
+
+.page-teams-box {
+	height:auto!important;
+    height:200px;
+   	min-height:200px;
+}
+
+.page-teams-box li {
+	border-bottom:1px dotted #818181;
+	margin: 2px 10px;
+	padding: 2px;
+}
+
+.page-teams-box .ui-selected {
+	background-color: #ffffcc;
+}

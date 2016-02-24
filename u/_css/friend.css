@@ -1,0 +1,219 @@
+@CHARSET "UTF-8";
+#page-friends-box{
+		
+}
+#page-friends-body-box{
+	
+}
+.friends-top-box{
+	border: 1px solid #96CE0D;
+	padding: 10px 10px;
+}
+#page-userfriend-search-form{
+	float: left;
+}
+.page-userfriend-toolbut-box{
+	float: right;
+}
+#friends-middle-box{
+	padding: 10px 10px;
+	margin: 10px auto;
+}
+#page-friend-nogo-list{
+	background-color:#eee;
+	margin-top: 1px;
+	margin-bottom:1px;
+	height:35px;
+	min-height: 35px;
+	height:auto!important;
+}
+#page-friend-nogo-list li{
+ 	border-bottom: 1px dashed #ccc;
+ 	height: 35px;
+ 	padding: 10px 10px;
+}
+
+#page-friend-nogo-list .friend-nogo-left-img{
+	float: left;
+	margin-right: 10px;
+}
+#page-friend-nogo-list .friend-nogo-center-box{
+	float: left;
+}
+#page-friend-nogo-list .friend-nogo-right-box{
+	float: right;
+	line-height: 35px;
+}
+
+
+#friends-foot-box{
+	padding: 10px 10px;
+}
+#page-friend-pass-list{
+	background-color:#eee;
+	margin: 10px auto;
+	overflow:hidden;
+	zoom:1;
+	min-height: 65px;
+}
+#page-friend-pass-list li{
+	float: left;
+	margin: 10px 12px;
+	width:55px;
+   	height:auto !important;
+	min-height:65px;
+   	overflow:hidden;
+   	text-align: center;
+}
+#page-friend-pass-list img{
+	display:block;
+	border: 1px solid black;
+	padding: 2px 2px;
+	width: 46px;
+	height: 46px;
+	color:#71A4B9;
+}
+/*control*/
+#friend-control-middle-box{
+	border: 1px solid #96CE0D;
+	padding: 10px 10px;
+	margin: 10px auto;
+}
+
+#page-modprivacy-form{
+	margin: 10px auto;
+	padding: 10px 10px;
+	background-color: #eee;
+}
+#page-modprivacy-form .inptext{
+	margin:5px 10px ;
+}
+/* find */
+#page-friend-find-middle-box{
+	padding: 10px 10px;
+}
+#page-friend-find-list{
+	margin-top: 20px;
+}
+#page-friend-find-list li{
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #96CE0D;
+	cursor:pointer;
+	margin:0.5em 0;
+	overflow:hidden;
+	padding:8px;
+	height: 140px;
+}
+
+#page-friend-find-list img.friends-find-left-img{
+	float: left;
+}
+.page-friend-find-info-box{
+	float:right;
+	width:180px;
+}
+.page-friend-find-info-box a{
+	width:100%;
+	display:block;
+	border-bottom: 1px solid #96CE0D;
+}
+
+ /************ADDFRIENDS******************/	
+#page-addfriends-box{
+	width: 380px;
+	margin: 5px auto;
+}
+#page-addfriends-someone-form{
+	padding: 10px;
+}
+#page-addfriends-someone-header-box h3{
+	color: red;
+	background-color: #FCFFCD;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	white-space:normal;
+}
+#page-addfriends-someone-body-box{
+	margin: 10px auto;
+	height:  auto;
+	min-height:85px;
+}
+#page-addfriends-someone-body-box img{
+	float: left;
+	width: 80px;
+	height: 80px;
+	border: 1px solid rgb(184, 212, 232); 
+}
+#page-addfriendmessage-box{
+	float: left;
+	width: 60%;
+	height:  auto;
+	min-height:80px;
+	margin-left: 10px;
+}
+#page-addfriendmessage-box textarea{
+	border: 1px solid rgb(184, 212, 232); 
+	color: gray;
+	border:1px solid #BDC7D8;
+	overflow:auto;
+	width:100%;
+	margin-top: 5px;
+	font-size: 12px;
+	height: 60px;
+}
+#page-addfriends-someone-tail-box{
+	clear:both;
+	margin-top: 10px;
+}
+
+#page-addfriends-anyone-box{
+	margin: 10px auto;
+}
+#page-addfriends-anyone-body-box{
+	
+}
+#page-addfriends-anyone-body-box img{
+	float: left;
+	border: 1px solid rgb(184, 212, 232); 
+}
+#page-addfriends-anyone-body-box h3{
+	float: left;
+	color: black;
+	width: 60%;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 10px;
+}
+#page-addfriends-anyone-tail-box{
+	clear:both;
+	margin: 10px auto;
+}
+ 
+#page-addfriends-box .inpbut { 
+	background-color:#96CE0D;
+	border:0px ;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:12px;
+	text-align:center;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+}
+#page-addfriends-title-box{
+	background-color:#96CE0D;
+	color: white;
+}
+.friend-addfriend-msg-box{
+	padding:8px 10px;
+	border-bottom:1px dashed #e3e3e3;
+}
+.friend-msg-box{
+	padding:8px 20px;
+	font-size:13px;
+}
+.friend-op-box{
+	padding:8px 15px;
+}
+ 

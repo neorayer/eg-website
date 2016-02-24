@@ -1,0 +1,44 @@
+vbox,box,hbox {
+	
+}
+
+body {
+	font-size: 12px;
+}
+
+* {
+	outline: none;
+	-moz-outline: none;
+	-moz-user-focus: none;
+}
+
+window,dialog{
+	-moz-appearance:none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+		/* 注意：window决不能加background: none,否则很多控件无法显示 */
+}
+
+
+tabbox,tabs,tab,tabpanels,tabpanel,tab:focus,tab[selected="true"],
+tree,treecols,treecol,treechildren,treeitem,treerow,treecell,
+listbox,listhead,listheader,listitem,richlistbox,richlistitem,
+button, splitter,label,caption
+{
+	-moz-appearance: none;
+	background: none;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+button {
+	min-width: 1px;
+}
+
+tab:hover {
+	cursor: pointer;
+}
+

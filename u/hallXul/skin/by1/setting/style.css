@@ -1,0 +1,116 @@
+box,vbox,hbox,listbox {
+}
+
+#setting-dialog {
+	background-image: url(set-bg.jpg);
+	background-position: 0 0 ;
+	border: none;
+}
+
+#dialog-head-box {
+	height: 22px;
+	background: transparent;
+}
+
+
+#setting-games-list {
+	margin: 37px 0 0 10px;
+	width: 100px;
+}
+
+#setting-games-list listitem {
+	height: 28px;
+	margin: 0 0 0 0 ;
+	color: #BFC4C8;
+	padding: 0 0 0 15px;
+	cursor: pointer;
+	border:1px solid transparent;
+}
+
+#setting-games-list listitem:hover {
+
+}
+
+#setting-games-list listitem[selected="true"] {
+	background-image: url(../main/blue-icon.jpg);
+	background-repeat: no-repeat;
+	background-position: 5px 10px;
+	color: #D8DB50;
+}
+
+#setting-info-box {
+	padding: 35px 20px 0 25px;
+}
+
+#game-startmodal-box >caption {
+	color: #D8DB50;
+	margin: 0 0 40px 0;
+}
+
+#game-startmodal-box {
+	padding:10px 10px 10px 10px;
+	height: 170px;
+}
+
+#game-exe-box {
+	margin: 30px 0 0 0;
+	padding:15px 3px 0 10px;
+	color: #D8DB50;
+}
+
+#game-exefile-textbox,
+#game-exefileparms-textbox {
+	-moz-appearance: none;
+	border: 0;
+	outline: 1px solid #218FC2;
+	background-color: #104360;
+	color: white;
+	width: 151px;
+}
+
+#setting-browserfile-button,
+#setting-searchfile-button,
+#setting-apply-button {
+	background-image: url(set-button.gif);
+	background-repeat: no-repeat;
+	width: 58px;
+	height: 20px;
+	margin: 2px 3px 0 0 ;
+	cursor: pointer;
+	color: #1D3E5D;
+}
+
+#setting-browserfile-button:hover,
+#setting-searchfile-button:hover,
+#setting-apply-button:hover {
+	background-position: 0 -20px;
+	color: black;
+}
+
+#game-exefileparms-label {
+	margin: 8px 0 0 0;
+}
+
+
+#setting-tip-box {
+	padding:30px 20px 10px 10px;
+}
+
+#setting-tip-box description {
+	line-height: 18px;
+	color: #777777;
+}
+
+#setting-tip-box caption {
+	color: transparent;
+}
+
+#setting-dialog .dialog-button {
+	margin: 0 20px 20px 0;
+}
+
+
+#setting-common-box {
+	margin: 50px 4px 0 10px;
+	color: white;
+}

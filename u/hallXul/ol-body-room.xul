@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<overlay
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	>
+	<popupset>
+		<menupopup id="room-chat-content-user-menupopup" onpopupshowing="Main.onChatUserMenuPopupShow(this)" onpopuphiding="Main.onChatUserMenuPopupHide(this)" >
+			<menuitem label="加为好友" oncommand="Main.onCommandAddToFriends()" />
+		</menupopup>
+		<menupopup id="room-chat-menupopup" >
+			<menuitem label="清除" oncommand="RoomChat.emptyChatHistory()" />
+		</menupopup>
+	</popupset>  
+
+	<!-- 房间 Begin -->
+	<tabpanel id="room-tabpanel" orient="vertical">
+		<hbox flex="1" >
+			<box id="room-left-border-box"></box>
+			<vbox flex="1">
+				<box id="room-upper-box">
+					<vbox>
+						<box id="room-path-box">
+							<box id="room-path-icon-box" />
+							<label id="room-path-label" value="当前房间:" />
+						</box>
+					</vbox>
+					<spacer flex="1" />
+					<browser id="room-browser" type="content" src="about:blank" hidden="true" flex="1" />
+				</box>
+				<splitter >
+				</splitter>
+				<vbox id="room-nether-box" flex="1">
+					<hbox  id="room-tools-box">
+						<box>
+							<button id="room-backhall-button" label="返回大厅" oncommand="Main.returnToHall()"/>
+						</box>
+						<box flex="1"/>
+						<box>
+							<checkbox id="room-warkey-checkbox" label="改键工具" tooltiptext="改键工具" checked="false" oncommand="Main.checkWarKey(this)" />
+							<checkbox id="room-sfwin-checkbox" label="智能全屏窗" tooltiptext="其他程序可与魔兽争霸同屏显示" checked="false" />
+							<checkbox id="room-xue-checkbox" label="显血" checked="false" />
+							<button id="room-startgame-button" label="开始游戏" oncommand="Main.startGame()"/>
+						</box>
+					</hbox>
+					<iframe id="room-chat-box" context="room-chat-menupopup" src="about:blank" flex="4" />
+					<hbox id="room-chat-send-box">
+						<textbox id="room-chat-textbox" flex="1" onkeydown="if(event.keyCode==13) RoomChat.sendChatMsg();">
+						</textbox>
+						<vbox>
+							<hbox>
+								<button id="room-chat-send-button" label="发送" oncommand="RoomChat.sendChatMsg()"/>
+								<button id="room-chat-face-button" label="表情" onclick="RoomChat.showEmotion(event);"/>
+							</hbox>
+						</vbox>
+					</hbox>
+				</vbox>
+			</vbox>
+			<box id="room-right-border-box"></box>
+		</hbox>
+		<hbox id="room-bottom-border-box" >
+			<box id="room-bottom-left-border-box" flex="1" />
+			<box id="room-bottom-right-border-box"  />
+		</hbox>
+	</tabpanel>
+	<!-- 房间 End -->
+</overlay>

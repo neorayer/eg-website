@@ -1,0 +1,265 @@
+#team-certificate-box{
+	min-height:300px;
+	height:auto!important;
+    height:300px;
+    border:1px solid gray;
+    background-color: #E1E2E2;
+    margin-bottom:10px;
+}
+.team-certi-title{
+	background:url(images/team/team-cert-title.jpg) repeat-x;
+}
+.team-certificate-title{
+	height:50px;
+	font-size:18px;
+	font-weight:bold;
+	line-height:50px;
+	padding-left:20px;
+	color:black;
+	
+}
+.team-certificate-sign{
+	padding-left:50px;
+	height:20px;
+	line-height:20px;
+	border-bottom:1px dashed gray;
+}
+.team-certificate-items-box{
+	padding:10px 20px;
+}
+.team-certificate-items-box li{
+	margin-left:10px;
+	display:inline;
+	width:80px;
+	border:1px solid gray;
+	height:25px;
+	line-height:25px;
+	float:left;
+	text-align:center;
+	background:#C8C8C8;
+}
+.team-certificate-items-box a{
+	color:black;
+}
+
+.all-team-logo-box{
+	width:46px;
+	height:62px;
+	padding:3px;
+	border:1px solid gray;
+	background:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#team-space-box{
+	min-height:800px;
+	height:auto!important;
+    height:800px;
+    border:1px solid gray;
+    background-color: #E1E2E2;
+    padding:10px;
+
+}
+.team-space-left-box{
+	float:left;
+	width:580px;
+	min-height:780px;
+	height:auto!important;
+    height:780px;
+    
+    padding:10px;
+}
+.team-space-right-box{
+	margin-left:10px;
+	display:inline;
+	float:left;
+	width:222px;
+	min-height:300px;
+	height:auto!important;
+    height:300px;
+    padding:20px 0px;
+}
+.team-visitor-box{
+	padding:10px;
+}
+.
+.team-visitor-box li{
+	height:160px;
+	margin-bottom:10px;
+}
+.team-visitor-title{
+	height:22px;
+	line-height:22px;
+	font-size:13px;
+	padding-left:10px;
+	color:black;
+}
+.team-visitors{
+   padding: 10px 10px;
+   min-height:170px;
+   height:auto!important;
+   height:170px;
+   background:white;
+   border:1px solid gray;
+}
+.team-visitors li{
+   width:55px;
+   float:left;
+   display:inline;
+   margin-left:6px;
+   height:85px;
+}
+.team-visitors img{
+    display:block;
+}
+.team-visitors-pic-box{
+	padding:3px;
+	border:1px solid gray;
+}
+
+.team-visitors-name-box{
+	width:55px;
+	word-wrap:break-word;
+	overflow:hidden;
+	height:25px;
+	padding:5px 0px;
+	min-height:28px;
+    height:auto!important;    
+}
+#page-teams-list tbody tr{
+	border-bottom:1px dashed gray;
+}
+
+
+.team-space-left-title{
+	padding:0px 10px;
+	border-bottom:1px solid gray;
+	height:25px;
+}
+.team-space-left-title li{
+	float:left;
+	margin-left:10px;
+	border-top:1px solid gray;
+	border-left:1px solid gray;
+	width:80px;
+	text-align:center;
+	border-right:1px solid gray;
+	height:25px;
+	line-height:25px;
+	color:black;
+}
+
+#team-space-left-body{
+	border-left:1px solid gray;
+	border-right:1px solid gray;
+	border-bottom:1px solid gray;
+	min-height:720px;
+	height:auto!important;
+    height:720px;
+    padding: 20px 10px;
+    background-color: #ffffff;
+}
+.certificate-label-box .teamcert-selected {
+	background-color: #ACC5CF;
+}
+#team-certificate-box {
+	position: relative;
+}
+
+#team-certificate-operator-box {
+	position: absolute;
+	height: 67px;
+	top: 20px;
+	right: 50px;
+	text-align: right;
+}
+
+.team-certificate-items-box .selected {
+	background-color: #ACC5CF;
+	border:2px solid gray;
+}
+.teamcerti-selected{
+	background:#ACC5CF;
+}
+
+
+
+#team-bbses-top-box {
+	margin-bottom: 10px;
+}
+
+#team-bbses-list {
+	width: 100%;
+	text-align: center;
+}	
+
+#team-bbses-list thead th {
+	border:1px solid gray;
+	background-color: #E6E6E6;
+	height: 30px;
+}
+
+#team-bbses-list tbody td {
+	border:1px solid gray;
+	height: 30px;
+}
+.team-bbs-title-list{
+	text-align:left;
+	padding-left:10px;
+}
+.bbs-detail-title-box{
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	font-size:13px;
+	border-bottom:1px dashed gray;
+	color:black;
+	background:#F3F3F3;
+}
+#team-bbs-middle-box {
+	border-bottom: 1px solid gray;
+	padding:10px 20px;;
+	font-size:13px;
+	color:black;
+	background:#F3F3F3;
+}
+.bbs-detail-author{
+	height:20px;
+	line-height:20px;
+	padding-left:30px;
+	background:#F3F3F3;
+}
+.team-bbs-replys-box{
+}
+.team-bbs-rep-list{
+	padding:10px;
+	background:#EBEBEB;
+	border-bottom:1px solid gray;
+}
+#team-page-player-cglevel{
+	background:#E1E2E2;
+	border:1px solid #808080;
+	
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:10px 20px;
+}
+.team-page-title-temp{
+	background:#ACC5CF none repeat scroll 0 0;
+	border-bottom:1px solid #C4D0A6;
+	border-top:1px solid #76A408;
+	height:25px;
+	line-height:25px;
+	padding:0 10px;
+}

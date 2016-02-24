@@ -1,0 +1,280 @@
+table {
+	border: 0;
+	margin: 0;
+	border-collapse: collapse;
+}
+
+body {
+	margin: 0 0;
+	padding: 0 0;
+}
+
+body,td,th{
+	font-size: 12px;
+	font-family: arial,helvetica,clean,sans-serif, 宋体 ;
+}
+
+table td {
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	padding:0;
+	margin:0;
+}
+
+ul, li {
+	padding: 0;
+	margin: 0;
+}
+/* **************************************** */
+form.standard {
+}
+
+form.standard ul {
+	padding: 0;
+	margin: 0;
+}
+
+form.standard li {
+	list-style-type: none;
+	clear: both;
+	margin-bottom: 3px;	
+}
+
+form.standard li label {
+	display: block;
+	float: left;
+	width: 100px;
+	line-height: 22px;
+	padding: 0px 10px;
+	background-color: #cccccc;
+}
+
+form.standard li input {
+	padding: 2px 3px;
+	border: 1px solid #cccccc;
+	line-height: 22px;
+	height: 16px;
+	width: 200px;
+}
+
+
+
+form.standard li select {
+	padding: 2px 3px;
+	border: 1px solid #cccccc;
+	line-height: 22px;
+	height: 22px;
+	float: left;
+}
+
+form.standard li.standard-form-buttons {
+	padding: 0 0 5px 0;
+}
+
+form.standard input.standard-button {
+	width: auto;
+	border: 1px solid #999b9a;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	text-decoration: none;
+	color: black;
+	background-image: url(gsprite.gif);
+	cursor: pointer;
+	
+}
+
+
+/* **************************************** */
+ul.standard-props {
+}
+
+ul.standard-props ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul.standard-props li {
+	list-style-type: none;
+	clear: both;
+	margin-bottom: 3px;	
+}
+
+ul.standard-props li label {
+	display: block;
+	float: left;
+	width: 100px;
+	line-height: 22px;
+	padding: 0px 10px;
+	background-color: #cccccc;
+}
+
+ul.standard-props li span {
+	padding: 2px 3px;
+	border: 1px solid #cccccc;
+	line-height: 22px;
+	height: 16px;
+	width: 200px;
+}
+
+
+
+/*****************************************/
+a.standard-button {
+	width: auto;
+	border: 1px solid #999b9a;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	text-decoration: none;
+	color: black;
+	background-image: url(gsprite.gif);
+	cursor: pointer;
+}
+
+/*********************************************/
+.standard-warn {
+	background-color: lightyellow;
+	border:1px solid red;
+	padding: 3px 10px;
+	margin: 3px 0;
+}
+
+/* **************************************** */
+table.standard {
+	border:1px solid gray;
+	border-top: 3px solid gray;
+}
+
+table.standard td{
+	padding: 3px 5px;
+}
+
+table.standard thead {
+	background-color: #c3d9ff;
+}
+
+/* **************************************** */
+ul.standard-nav {
+	padding: 0 0 0 100px;
+	margin: 0;
+	background-color: #E6EFF7;
+	display: block;
+	height: 30px;
+}
+
+ul.standard-nav li {
+	float: left;
+	list-style-type: none;
+}
+
+ul.standard-nav li a {
+	display: block;
+	text-decoration: none;
+	padding: 8px 10px;
+	color: #1C488F;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+ul.standard-nav li a:hover {
+	background-color: #5D88B0;
+	color: #CADCED;
+}
+
+/* **************************************** */
+
+ul.standard-vertical {
+	background-color: #cccccc;
+}
+
+ul.standard-vertical li a{
+	display: block;
+	text-decoration: none;
+	padding: 8px 10px;
+	color: #1C488F;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+ul.standard-vertical li a:hover {
+	background-color: white;
+	color: black;
+}
+
+/* **************************************** */
+.standard-body-box {
+	background-image: url(body.gif);	
+	background-position: 0 -1100px;
+}
+
+.standard-body-side-box {
+	width: 200px;
+	height: 400px;
+	vertical-align: top;
+	padding: 5px;
+}
+
+.standard-body-main-box {
+	padding: 5px;
+	background-color: #eeeeee;
+	vertical-align: top;
+}
+/* **************************************** */
+.standard-buttons-bar {
+	padding: 5px 20px;
+	height: 32px;
+}
+
+.standard-buttons-bar li {
+	list-style-type: none;
+	float: left;
+}
+
+.standard-buttons-bar li a {
+	display: block;
+	border: 1px solid #999b9a;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	text-decoration: none;
+	color: black;
+	background-image: url(gsprite.gif);
+	
+}
+
+.standard-buttons-bar li a:hover {
+}
+
+/* **************************************** */
+h2 {
+	background-color: #CEE0EF;
+	padding: 3px;
+	border-top:1px solid black;
+}
+/* **************************************** */
+
+#page-head-box {
+	background-image: url(sky.gif);
+}
+
+#page-head-top-box {
+	padding: 3px 20px;
+}
+
+#logo-label {
+	color: red;
+	font-weight: bold;
+	margin: 0px 20px;
+}
+
+#page-head-middle-box {
+}
+
+#page-foot-box {
+	clear: both;
+}
+
+

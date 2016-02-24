@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<box id="dialog-head-box" orient="vertical" >
+		<hbox id="winhead-buttons-box" align="right" >
+			<titlebar id="dialog-titlebar" flex="1" />
+			<button id="winhead-close-button"  oncommand="window.close()" />
+		</hbox>
+		<spacer flex="1" />
+	</box>
+	
+	<box id="dialog-tail-box" orient="vertical" >
+	</box>
+</overlay>

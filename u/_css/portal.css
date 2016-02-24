@@ -1,0 +1,179 @@
+body {
+	background-image: url(images/portal/bg.jpg);
+}
+
+#page-head-box {
+}
+
+/* top */
+#page-head-top-box {
+	background-image: url(images/portal/header_bg.gif);
+	padding: 0 50px;
+	border-bottom:1px solid #646464;
+	background-color: #e6e6e6;
+	line-height: 35px;
+	height:35px;
+}
+
+#page-head-top-left-box {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#page-head-top-right-box {
+	text-align: right;
+}
+
+#page-head-login-form {
+	float: right;
+}
+
+#page-head-login-form ul li {
+	margin-right: 8px;
+}
+
+#page-head-login-form input {
+	margin-top: 4px;
+}
+
+#page-head-login-form .inputText {
+	width: 100px;
+}
+
+#page-head-login-form ul li{
+	float: left;
+}
+
+#page-head-reg-link {
+	border:1px solid white;
+	background-color: orange;
+	padding: 2px 5px;
+	
+}
+
+/* middle */
+
+#page-head-middel-box {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 1px;
+	padding: 10px 0 0 0 ;
+	background: url(images/portal/header.jpg) left top no-repeat;
+	height: 90px;
+}
+
+
+#page-head-nav-box {
+	height: 70px;
+}
+#page-head-label-box{
+	height:20px;
+	line-height:20px;
+	padding-left:150px;
+}
+
+.head-logo-box{
+	width: 180px;
+	height: 80px;
+	float: left;
+	margin-right: 30px;
+	background-image: url('images/portal/labels.gif'); 
+}
+
+#egplayer-logo-box {
+	background-position: 0px 0px;
+}
+#egteam-logo-box {
+	background-position: -180px 0px;
+}
+#egmatch-logo-box {
+	background-position: -360px 0px;
+}
+#egarmory-logo-box{
+	font-size:30px;
+	font-weight:bold;
+}
+
+#egplayer-logo-box:hover,
+#egplayer-logo-box.logo-box-selected {
+	background-position: 0px 80px;
+}
+
+#egteam-logo-box:hover,
+#egteam-logo-box.logo-box-selected {
+	background-position: -180px 80px;
+}
+
+#egmatch-logo-box:hover,
+#egmatch-logo-box.logo-box-selected {
+	background-position: -360px 80px;
+}
+
+#page-body-box {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+/* WIN_Manage */
+
+#WIN_Manage {
+	border: 2px solid black;
+	background-color: #cccccc;
+	padding: 5px;
+	position: absolute;
+}
+
+.WIN {
+	display: none;
+}
+.WIN_Header{
+	text-align:right;
+	padding:5px;
+}
+
+#page-head-label-box li{
+	width:80px;
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	float:left;
+	display:inline;
+	
+}
+#page-head-label-box li a{
+	color:black;
+}
+.login-box{
+	background-color:#FFFFFF;
+	border-color:-moz-use-text-color gray gray;
+	border-style:none solid solid;
+	border-width:medium 1px 1px;
+	height:auto !important;
+	
+	overflow:visible;
+	padding:10px 15px 20px;
+}
+.portalindex-box{
+	background-color:#FFFFFF;
+	border-color:-moz-use-text-color gray gray;
+	border-style:none solid solid;
+	border-width:medium 1px 1px;
+	height:auto !important;
+	height:450px;
+	min-height:450px;
+	overflow:visible;
+	
+}
+#page-searchusers-pagebar-box{
+	height:30px;
+	line-height:30px;
+	padding-left:360px;
+}
+#eg-index-click-box{
+	cursor:pointer;
+	width:180px;
+	height:80px;
+}

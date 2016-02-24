@@ -1,0 +1,91 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+
+<overlay
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<popupset>
+		<menupopup id="rooms-menupopup" onpopupshowing="" onpopuphiding="">
+			<menuitem id="enterroom-menuitem" label="点击进入房间" oncommand="Main.clickRooms(event); return false;" accesskey="e" />
+			<!-- menuitem label="修改进入密码" command="cmd_modEnterPassRoom" accesskey="p" /-->
+			<!-- menuitem label="删除房间"  command="cmd_delPriRoom" accesskey="d" / -->
+		</menupopup>
+	</popupset>
+	<!-- 大厅 Begin -->
+	<tabpanel  id="hall-tabpanel" orient="horizontal" >
+		<vbox id="hallLeft" />
+		<vbox id="hallCenter" flex="1" >
+			<hbox flex="1">
+				<!-- 游戏zone的list -->
+				<vbox>
+				<richlistbox id="zone-list" onselect="Main.on_select_zone_list(this)">
+					<richlistitem hidden="true" />
+				</richlistbox>
+				</vbox>
+				
+				<!-- hallTabBox Begin -->
+				<tabbox id="hallTabBox" flex="1">
+					<hbox id="hallTabsBox">
+						<tabs >
+							<tab id="pubRoomTab" label="" />
+							<tab id="priRoomTab" label="" />
+							<tab id="mapDownTab" label="" />
+						</tabs>
+						<vbox flex="1">
+							<hbox id="roomsButtons" align="right" flex="1" >
+								<button id="roomsRefreshBtn" label="刷新" oncommand="Main.refreshRooms()" />
+								<button id="roomsSpeedBtn" label="测速" oncommand="Main.refreshRoomsSpeed()" />
+							</hbox>
+						</vbox>
+					</hbox>
+					<tabpanels id="hall-tabpanels" flex="1">
+						<!-- 公共房间列表 Begin -->
+						<tabpanel id="hall-pubrooms-tabpanel">
+							<tree id="hall-pubrooms-tree" ondblclick="Main.clickRooms(event);" enableColumnDrag="true" hidecolumnpicker="true" seltype="single" flex="1">
+								<treecols>
+									<treecol hidden="true" />
+									<treecol id="hall-pubrooms-tree-room-col" label="房间" flex="1" />
+									<treecol label="最大人数" flex="1" />
+									<treecol label="当前人数" flex="1" />
+									<treecol id="hall-pubrooms-tree-speed-col" label="速度" flex="1" />
+								</treecols>
+								<treechildren id="hall-pubrooms-treechildren" context="rooms-menupopup">
+								</treechildren>
+							</tree>
+						</tabpanel>
+						<!-- 公共房间列表 End -->
+								
+						<!-- 私人房间列表 Begin -->
+						<tabpanel>
+							<tree id="privRoomTree" enableColumnDrag="true" hidecolumnpicker="true" seltype="single" flex="1">
+								<treecols>
+									<treecol hidden="true" />
+									<treecol label="房间" flex="1" />
+									<treecol label="最大人数" flex="1" />
+									<treecol label="当前人数" flex="1" />
+									<treecol label="速度" flex="1" />
+								</treecols>
+								<treechildren>
+								</treechildren>
+							</tree>
+						</tabpanel>
+						<!-- 私人房间列表 End -->
+								
+						<!-- 地图列表 Begin -->
+						<tabpanel>
+						<iframe id="zone-map-browser" type="content" src="about:blank" hidden="true" />
+						</tabpanel>
+						<!-- 地图列表 End -->
+								
+						<tabpanel>
+							<browser  type="content-primary" src="about:blank" flex="1" />
+						</tabpanel>
+					</tabpanels>
+				</tabbox>	
+				<!-- hallTabBox End -->					
+			</hbox>
+			<box id="hallCenterFoot" />
+		</vbox>
+
+	</tabpanel>
+	<!-- 大厅 End -->
+
+</overlay>

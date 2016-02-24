@@ -1,0 +1,200 @@
+dialog {
+	background-image: url(../main/body.png);
+	background-position: 0 26px;
+	border:2px solid gray;
+}
+
+#win-top-resizer-box {
+	height: 2px;
+	margin: -2px 0 0 0;
+}
+#win-left-resizer {
+	background-color: transparent;
+	width: 2px;
+	margin: 0 0 0 -2px;
+}
+
+#win-right-resizer {
+	background-color: transparent;
+	width: 2px;
+	margin: 0 -2px 0 0;
+}
+
+#bottom-right-resizer {
+	-moz-appearance: none;
+}
+
+#winhead-top-box {
+	background-image: url(../global/green-title.jpg);
+	height: 19px;
+}
+
+#win-title-label {
+	color: #cccccc;
+	margin: 3px 0 0 20px;
+}
+
+titlebar {
+	cursor: move;
+}
+
+#toolbar-box {
+	height: 50px;
+	background-image: url(../main/page.jpg);
+	background-position: -13px -83px;
+	margin:0;
+	padding:0;
+}
+
+#side-box {
+	width: 180px;
+	background-color: black;
+}
+
+#body-box {
+}
+
+#bottom-box {
+	height: 25px;
+	background-image: url(../main/hall-center-foot.jpg);
+	background-repeat: no-repeat;
+	background-position: -3px bottom;
+}
+
+#main-box {
+	margin: 0 0 0 0;
+	background-image: url(../main/body-right.jpg);
+	background-position:  right -45px;
+	background-repeat: no-repeat;
+}
+
+#bottom-center-box {
+	margin: 0 0 0 0;
+	background-image: url(../main/hall-center-foot-right.jpg);
+	background-position:  right bottom;
+	background-repeat: no-repeat;
+}
+
+#bottom-right-box {
+	width: 180px;
+	background-color: black;
+}
+
+#chat-iframe {
+	margin:30px 30px 0 30px;
+	background-color: white;
+	border: 1px solid gray;
+}
+
+
+#send-box {
+	padding: 0px 30px 0 30px;
+}
+
+#avator-box {
+	background-image: url(../main/avator-frame.jpg);
+	background-repeat: no-repeat;
+	width: 170px;
+	height: 232px;
+	margin: 5px 0 0 5px;
+}
+
+#avator-image {
+	margin: 11px 0 0 10px;
+	background-image: url(../main/avator-sample-1.jpg);
+	background-repeat: no-repeat;
+	width: 148px;
+	height: 206px;
+}
+
+#person-info-grid {
+	margin: 13px 0 0 13px;
+}
+
+#person-info-grid row {
+	height: 20px;
+}
+
+#person-info-name-column {
+	width: 35px;
+}
+
+#person-info-value-column {
+}
+
+.person-info-name-label {
+	font-size: 14px;
+	color: #FFBA00;	
+}
+
+#person-info-grid description {
+	color: #FFFA84;	
+	width: 110px;
+}
+
+#chat-editor {
+	-moz-appearance: none;
+	background-color: white;
+	height: 56px;
+	outline: none;
+	border: 1px solid gray;
+	margin: 0 0 5px 0;
+}
+
+
+#send-box button{
+	width:63px;
+	height: 29px;
+	background-image: url(../main/room-send-buttons.gif);
+	background-repeat: no-repeat;
+	color: transparent;
+	cursor: pointer;
+}
+
+#send-button {
+	background-position: 0 0;
+	margin-right:5px;
+}
+#send-button:hover {
+	background-position: 0 -29px;
+}
+
+#face-button {
+	background-position: -63px 0;
+}
+#face-button:hover {
+	background-position: -63px -29px;
+}
+
+/********* for chat iframe document ********/
+body {
+	background-color: white;
+	font-size: 12px;
+}
+
+.chatline-time {
+	color: green;
+}
+
+.chatline-sender {
+	color: green;
+}
+
+.chatline-content {
+	color: black;
+	margin: 3px 3px 5px 10px;
+}
+
+.roomchat-line-box {
+	margin: 3px 0;
+}
+
+.chat-sys {
+	color: red;
+}
+
+
+.fightres-chat-label {
+	color: orange;
+	cursor: pointer;
+}

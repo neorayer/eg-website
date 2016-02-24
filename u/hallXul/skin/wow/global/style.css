@@ -1,0 +1,105 @@
+dialog {
+	border: 2px solid gray;
+	background-image: url(dialog-body.jpg);
+	background-position: left bottom;
+}
+
+
+
+.dialog-button {
+	background-image: url(dialog-button.jpg);
+	background-repeat: no-repeat;
+	width: 71px;
+	height: 21px;
+	cursor: pointer;
+	color: white;
+	margin: 0 20px 30px 0;
+}
+
+
+.dialog-button:hover{
+	background-position: 0 -21px;
+}
+
+#dialog-head-box {
+	height: 108px;
+	background-image: url(dialog-head.jpg);
+}
+
+#dialog-tail-box {
+	height: 27px;
+	border: 1px dashed white;
+	bottom: 0;
+}
+
+#dialog-titlebar {
+	height: 21px;
+	cursor: move;
+}
+
+#winhead-reload-button {
+	color: white;
+}
+
+#alert-dialog {
+	background-image: url(dialog-body.jpg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+
+#alert-content-box {
+	padding: 15px 0 0 0;
+}
+
+#alert-content-label {
+	color: red;
+}
+
+
+#winhead-buttons-box {
+	margin: 0 0 0 0 ;
+}
+
+#dialog-head-box #winhead-buttons-box {
+	margin: 0 0 0 0 ;
+}
+
+#winhead-buttons-box button {
+	background-image: url(window-head-buttons.gif);
+	height: 18px;
+}
+
+#winhead-min-button {
+	width:26px;
+	background-position: 0 0;
+}
+#winhead-min-button:hover {
+	background-position: 0 -18px;
+}
+
+#winhead-max-button {
+	width:24px;
+	background-position: -26px 0;
+}
+#winhead-max-button:hover {
+	background-position: -26px -18px;
+}
+
+#winhead-close-button {
+	width: 43px;
+	background-position: -50px 0;
+}
+
+#winhead-close-button:hover {
+	background-position: -50px -18px;
+}
+
+#winhead-normal-button {
+	width: 24px;
+	background-position: -26px -36px;
+}
+
+#winhead-normal-button:hover {
+	background-position: -26px -54px;
+}

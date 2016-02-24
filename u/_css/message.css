@@ -1,0 +1,65 @@
+/* portlet page*/
+
+.readed-message {
+}
+
+
+.message-win {
+	width: 500px;
+	height: auto;
+	background-color: #ffffcc;
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+#portlet-playernum-box {
+	color: #ffffff; 
+	text-align: right; 
+	font-weight: bold;
+}
+
+#portlet-playernum {
+	color:red;
+	font-weight: normal;
+}
+
+#portlet-message-top10-box {
+	width: 100%;
+}
+#portlet-message-top10-box thead{
+	text-align:center;
+	background:#ACC5CF;
+	height:30px;
+	line-height:30px;
+	color:black;
+	border:1px solid gray;
+}
+#portlet-message-top10-box tbody tr{
+	border-bottom:1px dashed gray;
+
+}
+#portlet-message-top10-box td{
+	height:20px;
+	line-height:20px;
+	padding:1px;
+}
+
+
+/* more page */
+
+#portlet-message-more-box {
+	width: 100%;
+	line-height: 162%;
+}
+
+#message-more-pagebar-box {
+	text-align: center;
+	margin-top: 10px;
+	padding-left:280px;
+}
+
+.portlet-message-top10-head-box td,
+.portlet-message-more-head-box td{
+	border-bottom:1px dotted #818181;
+}
+

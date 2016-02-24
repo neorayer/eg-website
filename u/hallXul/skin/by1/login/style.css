@@ -1,0 +1,142 @@
+window {
+	background: transparent;
+	background-image: url(login-bg.png);
+	background-repeat: no-repeat;
+	font-size: 14px;
+	background-position: 50px 50px;
+	color: #A51B08;
+}
+
+#winhead-buttons-box {
+	margin: 0 90px 0 0 ;
+	display: none;
+}
+
+#page-tools-box {
+	margin: 0 0 0 0;
+}
+
+titlebar {
+	cursor: move;
+	height: 24px;
+}
+
+#page-box {
+	margin: 0px;
+}
+
+#page-head-box {
+	height: 82px;
+}
+
+
+#page-body-box {
+}
+
+#page-body-top-box {
+	height: 90px;
+
+}
+#version-label {
+	margin: 20px 0 0 110px;
+	font-weight: bold;
+}
+
+#loading-label {
+	margin: 15px 0 0 110px;
+	color: red;
+	font-size: 12px;
+}
+
+#login-form-box {
+	padding: 15px 0 0 0 ;
+}
+	
+#login-form-grid {
+	margin: 0 0 0 160px;
+}
+
+#login-form-grid label {
+	color: #A51B08;
+	font-weight: bold;
+}
+
+#login-form-label-column {
+	width: 60px;
+}
+#login-form-input-column {
+	width: 230px;
+}
+
+#login-form-buttons-box{
+	margin: 15px 0 0 205px;
+	font-size: 12px;
+}
+
+#login-form-buttons-box  {
+	color: #A51B08;
+}
+
+#getpassword-button {
+	display: none;
+	background-image: url(question.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 110px;
+	color: #A51B08;
+}
+#getpassword-button:hover {
+	text-decoration: underline;
+}
+
+#clearhistory-button {
+	cursor: pointer;
+	color: #A51B08;
+}
+#clearhistory-button:hover {
+	text-decoration: underline;
+}
+
+#login-buttons-box {
+	padding: 7px 300px 0 100px;
+	height: 175px;
+}
+
+#userreg-button,
+#userexit-button,
+#getpassword2-button
+{
+	width: 100px;
+	cursor: pointer;
+	background-image:url(red-hover.gif);
+	background-repeat: no-repeat;
+	background-position: 100px 100px;
+	color: #A51B08;
+	border-right: 1px dashed #a7a7a7;
+}
+
+#userreg-button:hover,
+#userexit-button:hover,
+#getpassword2-button:hover {
+	background-position: 10px 0;
+	color: white;
+}
+
+#userlogin-button {
+	width: 100px;
+	cursor: pointer;
+	background-image:url(red-hover.gif);
+	background-repeat: no-repeat;
+	background-position: 100px 100px;
+	color: #A51B08;
+	border-right: 1px dashed #a7a7a7;
+}
+
+#userlogin-button:hover {
+	background-position: 10px 0;
+	color: white;
+}
+
+#nav-buttons-box {
+}

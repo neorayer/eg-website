@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "web-jsptaglibrary_1_2.dtd" >  
+<taglib>
+	<tlibversion>tlibversion</tlibversion>
+	<jsp-version>1.2</jsp-version>
+	<shortname>sor</shortname>
+	<tag>
+		<name>js</name>
+		<tagclass>com.skymiracle.sor.taglib.JavascriptTab</tagclass>
+		<attribute>
+			<description>
+				javascript
+			</description>
+			<name>url</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>xol</name>
+		<tagclass>com.skymiracle.sor.taglib.XulOverlayTab</tagclass>
+		<attribute>
+			<description>
+				xul-overlay
+			</description>
+			<name>url</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>xss</name>
+		<tagclass>com.skymiracle.sor.taglib.XulCssTab</tagclass>
+		<attribute>
+			<description>
+				xml-stylesheet
+			</description>
+			<name>url</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

@@ -1,0 +1,127 @@
+#armory-title-box{
+	height:50px;
+	padding:0px 300px;
+}
+#armory-title{
+	height:48px;
+	line-height:48px;
+	display:block;
+	width:200px;
+	border:2px solid gray;
+	text-align:center;
+	font-size:30px;
+	font-weight:bold;
+	background:#676767;
+	color:white;
+}
+#armory-body-box{
+	
+}
+.armory-item-box{
+	padding-top:10px;
+	border-bottom:1px solid gray;
+	height:25px;
+}
+.armory-item-box li{
+	float:left;
+	width:80px;
+	height:25px;
+	line-height:25px;
+	display:inline;
+	border-left:1px solid gray;
+	border-top:1px solid gray;
+	border-right:1px solid gray;
+	margin-left:10px;
+	text-align:center;
+	color:black;
+}
+.armory-top-search-box{
+	border:1px solid gray;
+}
+.armory-search-box{
+	padding-top:50px;
+	padding-bottom:0px;
+	text-align:center;
+}
+.armory-search-condi-box{
+	padding:10px 250px 40px 250px;
+}
+#armory-body{
+	clear:both;
+	
+	padding:0px 10px 10px 10px;
+}
+#armory-search-condition{
+	
+	text-align:center;
+	background:#B2B3B3;
+	height:30px;
+}
+#armory-search-condition li{
+	height:30px;
+	line-height:30px;
+	float:left;
+	width:80px;
+	font-weight:bold;
+	text-align:center;
+	margin-left:10px;
+	display:inline;
+	color:black;
+	cursor:pointer;
+}
+#top-ten-box{
+	clear:both;
+	margin-top:10px;
+	padding:10px;
+}
+#top-ten-box li{
+	margin-left:10px;
+	width:370px;
+	float:left;
+	display:inline;
+	margin-right:20px;
+}
+.top-ten-title{
+	height:25px;
+	line-height:25px;
+	font-weight:bold;
+}
+.top-ten-body-table{
+	border:1px solid gray;
+	
+}
+.top-ten-body-table thead{
+	background:#636363;
+	color:white;
+	text-align:center;
+}
+.top-ten-body-table tbody{
+	text-align:center;
+}
+.top-ten-body-table tbody tr{
+	height:20px;
+	line-height:20px;
+}
+
+#armory-helper-box{
+	clear:both;
+	margin-top:10px;
+	padding:20px;
+}
+.armory-helper-left-box{
+	width:500px;
+	float:left;
+	display:inline;
+	height:300px;
+	border:1px solid gray;
+	padding:10px;
+}
+.armory-helper-right-box{
+	width:200px;
+	float:left;
+	display:inline;
+	margin-left:10px;
+	padding:10px;
+	height:100px;
+	border:1px solid gray;
+}

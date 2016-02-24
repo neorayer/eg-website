@@ -1,0 +1,200 @@
+dialog {
+	background-image: url(../main/bgstyle.jpg);
+	background-position: 0 26px;
+	border:2px solid gray;
+	font-family: Arial;
+}
+
+#win-top-resizer-box {
+	height: 2px;
+	margin: -2px 0 0 0;
+}
+#win-left-resizer {
+	background-color: transparent;
+	width: 2px;
+	margin: 0 0 0 -2px;
+}
+
+#win-right-resizer {
+	background-color: transparent;
+	width: 2px;
+	margin: 0 -2px 0 0;
+}
+
+#bottom-right-resizer {
+	-moz-appearance: none;
+}
+
+#winhead-top-box {
+	background-image: url(../main/rednav-c.png);
+	height: 19px;
+}
+
+#win-title-label {
+	color: #cccccc;
+	margin: 3px 0 0 20px;
+}
+
+titlebar {
+	cursor: move;
+}
+
+#toolbar-box {
+	height: 20px;
+	margin:0;
+	padding:0;
+}
+
+#side-box {
+	width: 174px;
+	margin: 0 10px 0 0;
+	background-image: url(../main/userinfo.jpg);
+	padding: 10px 0px 0px 10px;
+}
+
+#body-box {
+}
+
+#bottom-box {
+	height: 10px;
+}
+
+#main-box {
+	margin: 0 0 0 0;
+}
+
+#bottom-center-box {
+	margin: 0 0 0 0;
+
+}
+
+#bottom-right-box {
+	width: 174px;
+	background-image: url(../main/userinfo.jpg);
+	background-position: left bottom;
+	margin: 0 10px 10px 0;
+}
+
+#chat-iframe {
+	margin:5px 10px 10px 10px;
+	background-color: #eeeeee;
+	border: 1px solid gray;
+}
+
+
+#send-box {
+	padding: 0px 10px 0 10px;
+}
+
+#send-enter-checkbox {
+	color: white;
+}
+
+#avator-box {
+	background-image: url(../main/avator-frame.jpg);
+	background-repeat: no-repeat;
+	width: 170px;
+	height: 232px;
+	margin: 5px 0 0 5px;
+}
+
+#avator-image {
+	margin: 11px 0 0 10px;
+	background-image: url(../main/avator-sample-1.jpg);
+	background-repeat: no-repeat;
+	width: 126px;
+	height: 176px;
+}
+
+#person-info-grid {
+	margin: 13px 0 0 13px;
+}
+
+#person-info-grid row {
+	height: 20px;
+}
+
+#person-info-name-column {
+	width: 35px;
+}
+
+#person-info-value-column {
+}
+
+.person-info-name-label {
+	font-size: 12px;
+	color: #FFBA00;	
+}
+
+#person-info-grid description {
+	color: #FFFA84;	
+	width: 110px;
+}
+
+#chat-editor {
+	-moz-appearance: none;
+	background-color: white;
+	height: 56px;
+	outline: none;
+	border: 1px solid gray;
+	margin: 0 0 5px 0;
+}
+
+
+#send-box button{
+	background-image: url(../global/set-button.gif);
+	background-repeat: no-repeat;
+	width: 58px;
+	height: 20px;
+	margin: 2px 10px 10px 0 ;
+	cursor: pointer;
+	color: #1D3E5D;
+}
+
+#send-button {
+	margin-right:5px;
+}
+#send-button:hover {
+	background-position: 0 -20px;
+	color: black;
+}
+
+#face-button {
+}
+#face-button:hover {
+	background-position: 0 -20px;
+	color: black;
+}
+
+/********* for chat iframe document ********/
+body {
+	background-color: white;
+	font-size: 12px;
+}
+
+.chatline-time {
+	color: green;
+}
+
+.chatline-sender {
+	color: green;
+}
+
+.chatline-content {
+	color: black;
+	margin: 3px 3px 5px 10px;
+}
+
+.roomchat-line-box {
+	margin: 3px 0;
+}
+
+.chat-sys {
+	color: red;
+}
+
+
+.fightres-chat-label {
+	color: orange;
+	cursor: pointer;
+}

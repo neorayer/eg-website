@@ -1,0 +1,258 @@
+#player-layoutpage-userinfo-box{
+	background:#eeeeee;
+}
+#playerhome-info-box{
+	width:160px;
+	padding:5px;
+}
+#index-page-player-center-body{
+	width:538px;
+	padding:0px 15px;
+	float:left;
+	border-right:1px solid gray;
+	background:white;
+}
+#index-page-player-head{
+	height:86px;
+	padding-top:20px;
+}
+.index-page-player-topline{
+	height:8px;
+	line-height:8px;
+	
+}
+#index-page-player-username-box{
+	color:black;
+	font-size:14px;
+	line-height:23px;
+	margin-bottom:2px;
+	padding:2px 10px;
+}
+#index-page-signature{
+	color:gray;
+	padding-left:30px;
+}
+#index-page-head-label-box{
+	border-bottom:1px solid #D8DFEA;
+	height:26px;	
+}
+#index-page-head-label-box li{
+	background:transparent url(images/portal/feedtabbg.gif) no-repeat scroll left -119px;
+	float:left;
+	margin-right:3px;
+	padding:0 0 0 10px;
+	margin-top:1px;
+}
+#index-page-head-label-box .playertitle-selected a{
+	display:block;
+	float:left;
+	font-weight:bold;
+	padding:7px 16px 4px 5px !important;
+	text-decoration:none;
+}
+#index-page-head-label-box a{
+	background:transparent url(images/portal/feedtabbg.gif) no-repeat scroll right -80px;
+	display:block;
+	float:left;
+	font-weight:bold;
+	padding:7px 16px 4px 5px !important;
+	text-decoration:none;
+	
+}
+
+#index-page-head-label-box .playertitle-selected{
+	background:#FFFFFF url(images/portal/feedtabbg.gif) repeat scroll left -39px;
+	line-height:16px;
+	
+}
+#index-page-head-label-box .playertitle-selected a{
+	background:transparent url(images/portal/feedtabbg.gif) no-repeat scroll right -5px;
+	color:#333333;
+	font-size:13px;
+}
+
+
+.player-page-portlet-title{
+	border-top:1px solid #94A3C4;
+	background:#ECEFF5;
+	height:25px;
+	line-height:25px;
+	padding:0px 8px;
+	color:#333333;
+	font-weight:bold;
+}
+#player-page-life-body{
+	height:50px;
+	padding:10px 8px 1px 8px;
+}
+#player-page-bottom{
+	height:13px;
+	line-height:13px;
+}
+#player-page-bottom-line{
+	height:10px;
+}
+.player-page-allhis{
+	padding:0px 10px 0px 0px;
+}
+.player-life-table{
+	border-top:1px solid gray;
+	border-left:1px solid gray;
+	border-right:1px solid gray;
+	
+}
+.player-life-table tr td{
+	border-bottom:1px solid gray;
+}
+#player-page-cglevel-body{
+	padding:10px 8px;
+	background-color: #F7F7F7;
+}
+#player-page-cgreplay-body{
+	height:340px;
+	min-height:340px;
+	height:auto!important;
+	background:#F7F7F7;
+	padding:10px 8px;
+}
+#player-page-fighttoyou-body{
+	height:70px;
+	min-height:70px;
+	height:auto!important;
+	vertical-align:top;
+	padding:10px 8px 2px 8px;
+	background:#F7F7F7;
+	margin-top:1px;
+	clear:both;
+}
+.plat-fight-name-box{
+	width:209px;
+	word-break : break-all; 
+	word-wrap : break-word ;
+	overflow:hidden;
+}
+#player-page-message-body{
+	height:60px;
+	padding:10px 8px;
+}
+#playerhome-album{
+	height:182px;
+	width:138px;
+	padding-left:20px;
+	padding-top:16px;
+	background:url(images/album/album.jpg) no-repeat;
+	background-position:8px 10px;
+}
+#playerhome-info-msgtable{
+	margin-top:10px;
+}
+#playerhome-info-msgtable tr td{
+	height:23px;
+	line-height:23px;
+}
+#playerhome-info-msgtable .t{
+	color:#333333;
+}
+.playerhome-info-longinfo{
+	overflow: hidden;
+	word-wrap:break-word;
+	width:78px;
+}
+#player-page-fight-bottom{
+	clear:both;
+	text-align:center;
+	padding-bottom:10px;
+	background:#F7F7F7;
+}
+#fightnote-info-table tr td{
+	padding:0px 3px;
+}
+.player-page-fight-left{
+}
+.player-page-fight-right{
+}
+#index-page-player-life{
+	border-bottom:1px solid #D8DFEA;
+}
+.messageBoard-page-list{
+	padding:8px 10px;
+	border-bottom:1px solid #D8DFEA;
+}
+.messageBoard-page-list-left{
+	background:transparent url(images/album/salbum.gif) no-repeat scroll -5px 2px;
+	height:50px;
+	padding:5px;
+	width:50px;
+}
+.messageBoard-page-list-right{
+	width:440px;
+}
+.messageBoard-page-list-right2{
+	width:660px;
+}
+.messageBoard-list-name{
+	height:25px;
+	line-height:25px;
+}
+.playerindex-message-textarea{
+	width:500px;
+}
+.playerindex-callback-message{
+	width:400px;
+}
+.backmessage-list-box{
+	padding:8px 10px;
+}
+.backmessage-list-top-box{
+	border-top:1px solid #D8DFEA;
+	height:20px;
+	line-height:20px;
+	padding:0px 10px;
+	background:#F3F5F9;
+}
+.backmessage-list-body-box{
+	clear:both;
+	padding:2px 10px;
+}
+#message-bottom-bar-box{
+	height:100px;
+	padding:8px 10px;
+	text-align:right;
+}
+.allrecordbar{
+	height:25px;
+	line-height:25px;
+}
+.fighthis-win{
+	width:50px;
+	height:14px;
+	background:url(images/portal/iswin.gif) center 0 no-repeat;
+}
+.fighthis-lose{
+	width:50px;
+	height:14px;
+	background:url(images/portal/iswin.gif) center 0 no-repeat;
+	background-position:center -14px;
+}
+#player-egreplay-list-box {
+	clear: both;
+	background:#EEEEEE;
+	text-align: center;
+	border:1px solid #FFFFFF;
+}
+#player-egreplay-list-box thead {
+	padding:5px;
+	background:white;
+	color:#333333;
+	cursor:pointer;
+	font-weight:bold;
+	line-height: 25px;
+	height: 25px;
+	border-bottom:1px solid #D8DFEA;
+}
+
+#player-egreplay-list-box tbody td{
+	height:25px;
+	line-height:25px;
+	border-bottom:1px dashed #D8DFEA;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE web-app
+	PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+	"http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<jsp-config>
+		<taglib>  
+			<taglib-uri>http://www.skymiracle.com/dev/java/taglibs/sor.tld</taglib-uri> 
+			<taglib-location>/WEB-INF/sor.tld</taglib-location>  
+		</taglib>  
+	</jsp-config>  
+
+
+	<servlet>
+		<servlet-name>ServletDispatcher</servlet-name>
+		<init-param>
+			<param-name>beanGetterClassName</param-name>
+			<param-value>com.skymiracle.gameUnion.AppBeanGetter</param-value>
+		</init-param>
+		<servlet-class>
+			com.skymiracle.sor.ServletDispatcher
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletDispatcher</servlet-name>
+		<url-pattern>*.vi</url-pattern>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+
+</web-app>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+
+<overlay 
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+		<vbox id="hallLeft" >
+			<richlistbox id="gametype-list" onselect="Main.on_select_gametype_list(this)" >
+				<listhead >
+					<listheader flex="1" label="" />
+				</listhead>
+				<richlistitem hidden="true" />
+				<richlistitem id="game-war3rpg-listitem" value="war3rpg" >
+				</richlistitem>
+				<richlistitem id="game-cs15-listitem" value="cs15" >
+				</richlistitem>
+				<richlistitem id="game-war3-listitem" value="war3">
+				</richlistitem>
+				<richlistitem id="game-cs16-listitem" value="cs16">
+				</richlistitem>
+				<richlistitem id="game-sc1-listitem" value="starcraft">
+				</richlistitem>
+			</richlistbox>
+			<richlistbox id="fightGameList">
+				<listhead >
+					<listheader id="gameType_street" flex="1" label="" />
+				</listhead>
+			</richlistbox>
+			<richlistbox id="fightGameList">
+				<listhead >
+					<listheader id="gameType_chess" flex="1" label="" />
+				</listhead>
+			</richlistbox>
+			<box id="hallLeftFoot" flex="1">
+							
+			</box>
+		</vbox>
+</overlay>

@@ -1,0 +1,146 @@
+window {
+	background: transparent;
+	background-image: url(login-bg.png);
+	background-repeat: no-repeat;
+	font-size: 14px;
+	color: #441005;
+}
+
+#winhead-buttons-box {
+	margin: 0 0 10px 0 ;
+}
+
+#page-tools-box {
+	margin: 0 0 15px 0;
+}
+
+titlebar {
+	cursor: move;
+	height: 24px;
+}
+
+#page-box {
+	margin: 0 70px 77px 70px;
+}
+
+#page-head-box {
+	height: 155px;
+}
+
+
+#page-body-box {
+}
+
+#page-body-top-box {
+	height: 70px;
+	padding:15px 0 0 0;
+}
+#version-label {
+	margin: 0 0 0 20px;
+	font-weight: bold;
+}
+
+#loading-label {
+	margin: 15px 0 0 20px;
+	color: red;
+	font-size: 12px;
+}
+
+#login-form-box {
+	padding: 15px 0 0 0px ;
+}
+	
+#login-form-grid {
+	margin: 0 0 0 90px;
+}
+
+#login-form-grid label {
+	color: #441005;
+	font-weight: bold;
+}
+
+#login-form-label-column {
+	width: 60px;
+}
+#login-form-input-column {
+	width: 230px;
+}
+
+#login-form-buttons-box{
+	margin: 10px 0 0 60px;
+	color: #441005;
+}
+
+#getpassword-button {
+	background-image: url(question.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 110px;
+}
+#getpassword-button:hover {
+	text-decoration: underline;
+}
+
+#clearhistory-button {
+	cursor: pointer;
+}
+#clearhistory-button:hover {
+	text-decoration: underline;
+}
+
+#login-buttons-box {
+	padding: 0 0 3px 10px;
+}
+
+#userreg-button,
+#userexit-button
+{
+	background-image: url(navy-button.jpg);
+	width: 102px;
+	height: 29px;
+	cursor: pointer;
+	color: transparent;
+	margin: 0 7px 0 0 ;
+}
+
+#userreg-button {
+	background-position: 0 0 ;
+}
+#userreg-button:hover {
+	background-position: -102px 0 ;
+}
+
+#userexit-button {
+	background-position: 0 -29px;
+}
+
+#userexit-button:hover {
+	background-position: -102px -29px;
+}
+
+#userlogin-button {
+	background-image: url(navy-login-button.jpg);
+	width: 87px;
+	height:51px;
+	color: transparent;
+	cursor: pointer;
+}
+
+#userlogin-button:hover {
+	background-position: 0 -51px;
+}
+
+#nav-buttons-box {
+	margin:19px 0 0 0;
+}
+
+#getpassword2-button {
+	display: none;
+}
+
+#updating-label {
+	margin: 0 0 0 10px;
+	font-size: 12px;
+	color: yellow;
+}

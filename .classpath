@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="WEB-INF/src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SkyJLib3"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-cli-1.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-fileupload-1.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-io-1.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-pool-1.4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/dnsjava-2.0.5.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/dnsjnio-0.9.8.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/h2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/htmlparser.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/james_jspf.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/java_memcached-release_2.0.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jaxen-1.1-beta-6.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jsr173_1.0_api.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/ldap.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/ldaputilities.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/mysql.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/mysql-connector-java-3.1.11-bin.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/proxool-0.9.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/proxool-cglib.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/spring.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/urlrewrite-2.6.0.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/servlet-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jasper.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jsp-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
+</classpath>

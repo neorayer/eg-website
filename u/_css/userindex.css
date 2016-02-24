@@ -1,0 +1,224 @@
+/**首页**/
+.index-page-user-album-box{
+	width:150px;
+	height:100%;
+}
+.index-page-user-album{
+	height:182px;
+	width:137px;
+	padding-left:13px;
+	padding-top:6px;
+	background:url(images/album/album.jpg) no-repeat;
+}
+.index-page-user-modbar{
+	height:17px;
+	line-height:17px;
+	padding:0px 20px;
+}
+.index-page-user-modbar a{
+	text-decoration:underline;
+}
+#index-page-user-body{
+	border-left:1px solid gray;
+	border-bottom:1px solid gray;
+	border-right:1px solid gray;
+	
+}
+#index-page-user-center-body{
+	width:568px;
+	padding:0px 15px;
+	float:left;
+	border-right:1px solid gray;
+	background:white;
+}
+#index-page-relation-body{
+	width:248px;
+	padding:5px;
+	float:right;
+}
+#index-page-user-info-box{
+	height:210px;
+	padding:20px 5px;
+}
+#index-page-user-msg-box{
+	height:105px;
+	border-top:1px solid #97ce0f;
+}
+#index-page-user-fesh-box{
+	height:305px;
+	min-height:305px;
+	height:auto!important;
+	border-top:1px solid #97ce0f;
+
+}
+.index-page-user-relation-title{
+	border-top:1px solid #76A408;
+	background:#D2E99A;
+	border-bottom:1px solid #C4D0A6;
+	height:25px;
+	line-height:25px;
+	padding:0px 10px;
+}
+.index-page-user-titlefont{
+	color:black;
+}
+.index-page-user-titlemore{
+	
+}
+.index-page-user-relation-body{
+	height:220px;
+	padding:15px;
+}
+.index-page-user-relation-body li{
+	width:70px;
+	float:left;
+	height:95px;
+	display:inline;
+	margin-left:2px;
+	background:url(images/album/salbum.gif) no-repeat;
+}
+
+.index-page-user-info-box{
+	width:395px;
+	height:100%;
+}
+.index-page-username{
+	border-bottom:1px solid #D8DEEA;
+	line-height:23px;
+	margin-bottom:2px;
+	padding:2px 10px;
+	font-size:14px;
+	color:black;
+}
+#index-page-myinfo-table{
+	margin-top:5px;
+}
+.index-page-info-value{
+	color:#71A4B9;
+}
+#user-index-newmsg-box{
+	height: 50px; 
+	padding: 10px 10px 10px 40px;
+	line-height: 40px;
+	color:black;
+}
+
+#allvisitor-page{
+	padding:15px;
+	border-bottom:1px solid #bbbbbb;
+	border-left:1px solid #bbbbbb;
+	height:560px;
+	min-height:560px;
+	height:auto!important;
+}
+#allvisitor-page-title{
+	height:45px;
+	line-height:45px;
+	padding:0px 15px;
+	font-size:14px;
+	color:black;
+	border-bottom:1px solid #d8dfea;
+}
+#allvisitor-page-body ul{
+	padding:15px;
+}
+#allvisitor-page-body li{
+	width:195px;
+	float:left;
+	height:70px;
+	padding:15px 0px;
+	border-bottom:1px solid #d8dfea;
+}
+
+.allvisitor-page-album{
+	background:url(images/album/salbum.gif) no-repeat;
+	background-position:-5px 2px ;
+	width:50px;
+	height:50px;
+	padding:5px;
+}
+.allvisitor-page-album img{
+	width:50px;
+	height:50px;
+}
+.allvisitor-page-albumright{
+	width:124px;
+}
+.allvisitor-page-name{
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+}
+.allvisitor-page-name a{
+	text-decoration:underline;
+}
+.allvisitor-page-time{
+	font-size:12px;
+}
+#allvisitors-pagebar{
+	height:30px;
+	line-height:30px;
+	padding-left:250px;
+}
+.allvisitor-page-top-bar{
+	padding:5px 15px;
+}
+.allvisitor-page-top-bar a{
+	font-size:13px;
+	text-decoration:underline;
+}
+#friendrelation-label-box{
+	padding:9px;
+	height:19px;
+	border-bottom:1px solid #E3E3E3;
+}
+.friendrelation-label-hover{
+	background:url("images/portal/bqc_on.gif") no-repeat;
+	float:left;
+	height:23px;
+	overflow:hidden;
+	padding-top:6px;
+	text-align:center;
+	width:115px;
+}
+.friendrelation-label{
+	background:url("images/portal/bqc_of.gif") no-repeat;
+	float:left;
+	height:23px;
+	overflow:hidden;
+	padding-top:6px;
+	text-align:center;
+	width:115px;
+}
+
+#freshmsgs-top-box tr td{
+	padding:5px;
+	border-bottom:1px solid #ECEFF5;
+}
+#freshmsgs-top-box a.dellink{
+	color: #71A4B9;
+	background-color: white;
+	width: 13px;
+	height: 13px;
+	display: block;
+	text-align: center;
+	line-height: 13px;
+}
+#freshmsgs-top-box a.dellink:hover{
+	color: #cccccc;
+	background-color: #71A4B9;
+}
+.index-page-user-fesh-body-box{
+	padding:8px 10px;
+}
+.index-page-user-freshtitle{
+	height:20px;
+	line-height:20px;
+	font-size:14px;
+}
+.index-page-user-freshbody{
+	padding:8px 10px;
+}
+#user-page-cglevel-body{
+	padding:10px 8px;
+}

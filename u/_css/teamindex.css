@@ -1,0 +1,92 @@
+#teamindex-page-head{
+	height:50px;
+	background:#eee;
+}
+
+#teamindex-page-top-body{
+	background:white;
+	height:300px;
+	
+}
+#teamindex-page-bottom-body{
+	
+	height:500px;
+	
+}
+#teamindex-page-logo{
+	width:185px;
+	padding:10px;
+	height:280px;
+	background:#EEEEEE;
+}
+#teamindex-logo{
+	height:110px;
+	border:1px solid #d8dfea;
+}
+#teamindex-info{
+	width:240px;
+	padding:8px 10px;
+}
+#teamindex-top-right{
+	width:520px;
+	
+}
+.firstline-player-box{
+	height:150px;
+	padding:8px 10px;
+}
+.today-team-message{
+	padding:8px 10px;
+}
+.team-page-title-box{
+	background:#ECEFF5 none repeat scroll 0 0;
+	border-top:1px solid #94A3C4;
+	color:#333333;
+	font-weight:bold;
+	height:25px;
+	line-height:25px;
+	padding:0 8px;
+}
+.team-page-title{
+	color:#333333;
+	font-weight:bold;
+	line-height:25px;
+}
+.team-center-white-body{
+	background:white;
+}
+#team-page-eglevel{
+	height:264px;
+	width:460px;
+	padding:8px 10px;
+	background:white;
+}
+#team-page-eghistory{
+	height:264px;
+	width:500px;
+	padding:8px 10px;
+	
+	background:white;
+}
+#team-page-bottom-left{
+	width:185px;
+	padding:8px 10px;
+}
+#team-page-bottom-right{
+	width:795px;
+	background:white;
+}
+.team-dongtai-box{
+	width:500px;
+	height:300px;
+	min-height:300px;
+	height:auto!important;
+	padding:8px 15px;
+}
+.team-member-box{
+	height:300px;
+	min-height:300px;
+	height:auto!important;
+	width:240px;
+	padding:8px 10px;
+}
